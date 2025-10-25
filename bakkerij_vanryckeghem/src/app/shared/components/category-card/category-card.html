@@ -1,0 +1,29 @@
+<div class="category-card" [class.clickable]="link()">
+  @if (link()) {
+    <a [routerLink]="link()" class="category-card-link">
+      <div class="category-card-content">
+        @if (imageUrl()) {
+          <div class="category-card-image">
+            <img [src]="imageUrl()" [alt]="title()" loading="lazy" />
+          </div>
+        }
+        <div class="category-card-body">
+          <h3 class="category-card-title">{{ title() }}</h3>
+          <p class="category-card-description">{{ description() }}</p>
+        </div>
+      </div>
+    </a>
+  } @else {
+    <div class="category-card-content">
+      @if (imageUrl()) {
+        <div class="category-card-image">
+          <img [src]="imageUrl()" [alt]="title()" loading="lazy" />
+        </div>
+      }
+      <div class="category-card-body">
+        <h3 class="category-card-title">{{ title() }}</h3>
+        <p class="category-card-description">{{ description() }}</p>
+      </div>
+    </div>
+  }
+</div>

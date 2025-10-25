@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { Hero } from '../../../shared/components/hero/hero';
-import { Card } from '../../../shared/components/card/card';
+import { CategoryCard } from '../../../shared/components/category-card/category-card';
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, Card],
+  imports: [Hero, CategoryCard],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
