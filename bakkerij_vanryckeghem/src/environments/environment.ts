@@ -1,11 +1,11 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:3000/api',
-  bakeryName: 'Bakkerij Van Ryckeghem',
+  bakeryName: 'Bakkerij Vanryckeghem',
   address: {
-    street: 'Bakkerijstraat 1',
-    city: 'Zulte',
-    zip: '9870',
+    street: 'Overleiestraat 38',
+    city: 'Harelbeke',
+    zip: '8530',
     country: 'België'
   },
   contact: {
