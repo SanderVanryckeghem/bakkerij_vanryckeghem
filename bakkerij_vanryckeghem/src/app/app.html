@@ -1,77 +1,9 @@
-<div class="min-h-screen bg-bakery-cream">
+<div class="min-h-screen bg-bakery-cream flex flex-col">
   <app-header></app-header>
 
-  <div class="container-custom py-16">
-    <h1 class="text-hero text-bakery-brown mb-8">Bakkerij Van Ryckeghem</h1>
-
-    <div class="mb-12">
-      <h2 class="text-section mb-6">Design System Showcase</h2>
-
-      <div class="mb-8">
-        <h3 class="text-2xl mb-4 text-bakery-brown-dark">Color Palette</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="text-center">
-            <div class="h-20 bg-bakery-cream rounded-card mb-2"></div>
-            <p class="text-sm">Cream</p>
-          </div>
-          <div class="text-center">
-            <div class="h-20 bg-bakery-brown rounded-card mb-2"></div>
-            <p class="text-sm">Brown</p>
-          </div>
-          <div class="text-center">
-            <div class="h-20 bg-bakery-gold rounded-card mb-2"></div>
-            <p class="text-sm">Gold</p>
-          </div>
-          <div class="text-center">
-            <div class="h-20 bg-white rounded-card mb-2 border border-gray-300"></div>
-            <p class="text-sm">White</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-8">
-        <h3 class="text-2xl mb-4 text-bakery-brown-dark">Typography</h3>
-        <h1 class="mb-2">Heading 1 - Display</h1>
-        <h2 class="mb-2">Heading 2 - Hero</h2>
-        <h3 class="mb-2">Heading 3 - Section</h3>
-        <p class="mb-2">Body text - Regular paragraph with proper line height and spacing for readability.</p>
-      </div>
-
-      <div class="mb-8">
-        <h3 class="text-2xl mb-4 text-bakery-brown-dark">Buttons</h3>
-        <div class="flex flex-wrap gap-4">
-          <app-button>Primary Button</app-button>
-          <app-button variant="secondary">Secondary Button</app-button>
-          <app-button variant="outline">Outline Button</app-button>
-        </div>
-        <div class="flex flex-wrap gap-4 mt-4">
-          <app-button size="sm">Small</app-button>
-          <app-button size="md">Medium</app-button>
-          <app-button size="lg">Large</app-button>
-        </div>
-      </div>
-
-      <div class="mb-8">
-        <h3 class="text-2xl mb-4 text-bakery-brown-dark">Cards</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <app-card>
-            <h4 class="text-xl mb-2">Brood</h4>
-            <p>Ambachtelijk brood, dagvers gebakken.</p>
-          </app-card>
-          <app-card>
-            <h4 class="text-xl mb-2">Gebak</h4>
-            <p>Heerlijk gebak voor elke gelegenheid.</p>
-          </app-card>
-          <app-card>
-            <h4 class="text-xl mb-2">Specialiteiten</h4>
-            <p>Ontdek onze seizoensgebonden verwenningen.</p>
-          </app-card>
-        </div>
-      </div>
-    </div>
-  </div>
+  <main class="flex-grow">
+    <router-outlet></router-outlet>
+  </main>
 
   <app-footer></app-footer>
 </div>
-
-<router-outlet />
