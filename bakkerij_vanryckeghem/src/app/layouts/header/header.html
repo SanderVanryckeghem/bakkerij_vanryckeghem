@@ -1,0 +1,62 @@
+<header class="header">
+  <div class="container-custom">
+    <nav class="nav-container">
+      <div class="logo-container">
+        <a routerLink="/" class="logo-link">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor" opacity="0.6"/>
+            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">Bakkerij Van Ryckeghem</span>
+        </a>
+      </div>
+
+      <div class="desktop-nav">
+        @for (item of navItems; track item.route) {
+          <a
+            [routerLink]="item.route"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: item.route === '/'}"
+            class="nav-link"
+          >
+            {{ item.label }}
+          </a>
+        }
+      </div>
+
+      <button
+        class="mobile-menu-button"
+        (click)="toggleMobileMenu()"
+        [attr.aria-expanded]="mobileMenuOpen()"
+        aria-label="Toggle menu"
+      >
+        @if (!mobileMenuOpen()) {
+          <svg class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        } @else {
+          <svg class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        }
+      </button>
+    </nav>
+
+    @if (mobileMenuOpen()) {
+      <div class="mobile-nav">
+        @for (item of navItems; track item.route) {
+          <a
+            [routerLink]="item.route"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: item.route === '/'}"
+            class="mobile-nav-link"
+            (click)="closeMobileMenu()"
+          >
+            {{ item.label }}
+          </a>
+        }
+      </div>
+    }
+  </div>
+</header>
