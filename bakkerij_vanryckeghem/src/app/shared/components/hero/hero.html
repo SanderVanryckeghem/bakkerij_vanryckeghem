@@ -1,0 +1,17 @@
+<section class="hero" [style.background-image]="backgroundImage() ? 'url(' + backgroundImage() + ')' : 'none'">
+  <div class="hero-overlay">
+    <div class="container-custom hero-content">
+      <h1 class="hero-title">{{ title() }}</h1>
+      @if (subtitle()) {
+        <p class="hero-subtitle">{{ subtitle() }}</p>
+      }
+      @if (ctaText() && ctaLink()) {
+        <div class="hero-cta">
+          <a [routerLink]="ctaLink()">
+            <app-button size="lg">{{ ctaText() }}</app-button>
+          </a>
+        </div>
+      }
+    </div>
+  </div>
+</section>
