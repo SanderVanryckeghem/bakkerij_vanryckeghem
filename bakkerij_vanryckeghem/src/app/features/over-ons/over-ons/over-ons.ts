@@ -7,6 +7,13 @@ interface TimelineEvent {
   description: string;
 }
 
+interface TeamMember {
+  name: string;
+  role: string;
+  description: string;
+  imageUrl?: string;
+}
+
 @Component({
   selector: 'app-over-ons',
   imports: [Hero],
@@ -14,6 +21,29 @@ interface TimelineEvent {
   styleUrl: './over-ons.scss',
 })
 export class OverOns {
+  team: TeamMember[] = [
+    {
+      name: 'Jan Vanryckeghem',
+      role: 'Meester-Bakker',
+      description: 'Al meer dan 40 jaar actief in de bakkerij. Jan is de spil van ons bedrijf en staat bekend om zijn perfectie en vakmanschap.'
+    },
+    {
+      name: 'Marie Vanryckeghem',
+      role: 'Patissier',
+      description: 'Marie tovert dagelijks de mooiste taarten en gebakjes. Haar creativiteit en oog voor detail maken elk stuk uniek.'
+    },
+    {
+      name: 'Tom Vanryckeghem',
+      role: 'Bakker - Vierde Generatie',
+      description: 'Tom vertegenwoordigt de vierde generatie en brengt frisse ideeën terwijl hij de familietraditie respecteert.'
+    },
+    {
+      name: 'Sophie Vanryckeghem',
+      role: 'Winkelverantwoordelijke',
+      description: 'Sophie zorgt ervoor dat onze klanten zich altijd welkom voelen en helpt hen met een glimlach aan de perfecte keuze.'
+    }
+  ];
+
   timeline: TimelineEvent[] = [
     {
       year: '1923',

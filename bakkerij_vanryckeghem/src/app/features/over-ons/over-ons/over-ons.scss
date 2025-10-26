@@ -115,3 +115,82 @@
   line-height: 1.6;
   font-size: 1rem;
 }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(92, 61, 46, 0.1), 0 2px 4px -1px rgba(92, 61, 46, 0.06);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgba(92, 61, 46, 0.2), 0 4px 6px -2px rgba(92, 61, 46, 0.1);
+  }
+}
+
+.team-card-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-color: #F5F0E8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .team-card:hover & img {
+    transform: scale(1.05);
+  }
+}
+
+.team-card-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #F5F0E8 0%, #E8DED0 100%);
+}
+
+.team-card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.team-card-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #5C3D2E;
+  margin-bottom: 0.5rem;
+  font-family: Georgia, Palatino, 'Times New Roman', serif;
+}
+
+.team-card-role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #F5A623;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.team-card-description {
+  color: #7A5A48;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}

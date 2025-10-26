@@ -27,8 +27,40 @@
       </div>
     </section>
 
+    <section class="mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-section text-bakery-brown mb-4">Ons Team</h2>
+        <p class="text-lg text-bakery-brown-light">
+          De mensen achter de ovens en de toonbank
+        </p>
+      </div>
+
+      <div class="team-grid">
+        @for (member of team; track member.name) {
+          <div class="team-card">
+            <div class="team-card-image">
+              @if (member.imageUrl) {
+                <img [src]="member.imageUrl" [alt]="member.name" loading="lazy">
+              } @else {
+                <div class="team-card-placeholder">
+                  <svg class="w-20 h-20 text-bakery-brown-light" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                  </svg>
+                </div>
+              }
+            </div>
+            <div class="team-card-body">
+              <h3 class="team-card-name">{{ member.name }}</h3>
+              <p class="team-card-role">{{ member.role }}</p>
+              <p class="team-card-description">{{ member.description }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
     <p class="text-lg text-center text-bakery-brown-light">
-      Content voor team en filosofie volgt in issues #12-13
+      Content voor filosofie volgt in issue #13
     </p>
   </div>
 </div>
