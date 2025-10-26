@@ -1,15 +1,7 @@
-import { Component, signal, computed } from '@angular/core';
+import { Component, signal, computed, inject } from '@angular/core';
 import { Hero } from '../../../shared/components';
-
-type Category = 'Alle' | 'Brood' | 'Gebak' | 'Specialiteiten';
-
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  category: Exclude<Category, 'Alle'>;
-  imageUrl?: string;
-}
+import { ContentService } from '../../../shared/services';
+import { CategoryFilter, CATEGORY_FILTERS } from '../../../shared/constants/categories';
 
 @Component({
   selector: 'app-assortiment',
@@ -18,11 +10,27 @@ interface Product {
   styleUrl: './assortiment.scss',
 })
 export class Assortiment {
-  selectedCategory = signal<Category>('Alle');
+  private contentService = inject(ContentService);
 
-  categories: Category[] = ['Alle', 'Brood', 'Gebak', 'Specialiteiten'];
+  selectedCategory = signal<CategoryFilter>('Alle');
+  categories = CATEGORY_FILTERS;
+  products = this.contentService.getProducts();
 
-  products: Product[] = [
+  filteredProducts = computed(() => {
+    const category = this.selectedCategory();
+    if (category === 'Alle') {
+      return this.products;
+    }
+    return this.products.filter(p => p.category === category);
+  });
+
+  selectCategory(category: CategoryFilter) {
+    this.selectedCategory.set(category);
+  }
+}
+
+/*
+  OLD_products: Product[] = [
     {
       id: 1,
       name: 'Wit Brood',
@@ -97,15 +105,4 @@ export class Assortiment {
     }
   ];
 
-  filteredProducts = computed(() => {
-    const category = this.selectedCategory();
-    if (category === 'Alle') {
-      return this.products;
-    }
-    return this.products.filter(p => p.category === category);
-  });
-
-  selectCategory(category: Category) {
-    this.selectedCategory.set(category);
-  }
-}
+*/
