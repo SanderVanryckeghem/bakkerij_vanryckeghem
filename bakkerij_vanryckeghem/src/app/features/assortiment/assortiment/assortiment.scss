@@ -1,0 +1,118 @@
+.category-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.category-filter-btn {
+  padding: 0.75rem 2rem;
+  background: white;
+  border: 2px solid #E8DED0;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5C3D2E;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #F5A623;
+    background-color: #FAFAF8;
+  }
+
+  &.active {
+    background: linear-gradient(135deg, #F5A623 0%, #D4921F 100%);
+    border-color: #F5A623;
+    color: white;
+  }
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(92, 61, 46, 0.1), 0 2px 4px -1px rgba(92, 61, 46, 0.06);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgba(92, 61, 46, 0.2), 0 4px 6px -2px rgba(92, 61, 46, 0.1);
+
+    .product-image img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #F5F0E8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+}
+
+.product-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #F5F0E8 0%, #E8DED0 100%);
+  color: #B8A89A;
+}
+
+.product-content {
+  padding: 1.5rem;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #5C3D2E;
+  margin-bottom: 0.5rem;
+  font-family: Georgia, Palatino, 'Times New Roman', serif;
+}
+
+.product-category {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #F5A623;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.product-description {
+  color: #7A5A48;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.no-products {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #7A5A48;
+  font-size: 1.125rem;
+}

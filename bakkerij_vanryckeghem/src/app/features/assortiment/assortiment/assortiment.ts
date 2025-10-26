@@ -1,11 +1,111 @@
-import { Component } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
+import { Hero } from '../../../shared/components';
+
+type Category = 'Alle' | 'Brood' | 'Gebak' | 'Specialiteiten';
+
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  category: Exclude<Category, 'Alle'>;
+  imageUrl?: string;
+}
 
 @Component({
   selector: 'app-assortiment',
-  imports: [],
+  imports: [Hero],
   templateUrl: './assortiment.html',
   styleUrl: './assortiment.scss',
 })
 export class Assortiment {
+  selectedCategory = signal<Category>('Alle');
 
+  categories: Category[] = ['Alle', 'Brood', 'Gebak', 'Specialiteiten'];
+
+  products: Product[] = [
+    {
+      id: 1,
+      name: 'Wit Brood',
+      description: 'Klassiek wit brood, knapperig van buiten en zacht van binnen',
+      category: 'Brood'
+    },
+    {
+      id: 2,
+      name: 'Volkoren Brood',
+      description: 'Gezond en voedzaam volkoren brood met een heerlijke smaak',
+      category: 'Brood'
+    },
+    {
+      id: 3,
+      name: 'Meergranen Brood',
+      description: 'Rijk meergranenbrood met zaden en pitten',
+      category: 'Brood'
+    },
+    {
+      id: 4,
+      name: 'Desem Brood',
+      description: 'Traditioneel desembrood met een unieke smaak',
+      category: 'Brood'
+    },
+    {
+      id: 5,
+      name: 'Croissant',
+      description: 'Boterrijke croissant, elke ochtend vers gebakken',
+      category: 'Gebak'
+    },
+    {
+      id: 6,
+      name: 'Chocoladekoek',
+      description: 'Smeuïge chocoladekoek met pure chocolade',
+      category: 'Gebak'
+    },
+    {
+      id: 7,
+      name: 'Appeltaart',
+      description: 'Huisgemaakte appeltaart met verse appels en kaneel',
+      category: 'Gebak'
+    },
+    {
+      id: 8,
+      name: 'Rijstevlaai',
+      description: 'Traditionele rijstevlaai met romige vulling',
+      category: 'Gebak'
+    },
+    {
+      id: 9,
+      name: 'Kerststol',
+      description: 'Traditionele kerststol met amandelspijs en rozijnen',
+      category: 'Specialiteiten'
+    },
+    {
+      id: 10,
+      name: 'Paasbrood',
+      description: 'Heerlijk paasbrood met amandelspijs',
+      category: 'Specialiteiten'
+    },
+    {
+      id: 11,
+      name: 'Speculaas',
+      description: 'Krokante speculaas met traditionele kruiden',
+      category: 'Specialiteiten'
+    },
+    {
+      id: 12,
+      name: 'Taart op Bestelling',
+      description: 'Gepersonaliseerde taarten voor elke gelegenheid',
+      category: 'Specialiteiten'
+    }
+  ];
+
+  filteredProducts = computed(() => {
+    const category = this.selectedCategory();
+    if (category === 'Alle') {
+      return this.products;
+    }
+    return this.products.filter(p => p.category === category);
+  });
+
+  selectCategory(category: Category) {
+    this.selectedCategory.set(category);
+  }
 }
