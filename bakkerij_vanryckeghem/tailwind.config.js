@@ -1,3 +1,5 @@
+const { colors, shadows } = require('./src/app/shared/styles/colors.js');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,18 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        'bakery': {
-          cream: '#F5F0E8',
-          'cream-dark': '#E8E3DB',
-          brown: '#5C3D2E',
-          'brown-light': '#7A5A48',
-          'brown-dark': '#3D2820',
-          gold: '#F5A623',
-          'gold-light': '#F7B84D',
-          'gold-dark': '#D89419',
-        },
-      },
+      colors: colors,
       fontFamily: {
         'serif': ['Georgia', 'Palatino', 'Times New Roman', 'serif'],
         'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif'],
@@ -37,8 +28,10 @@ module.exports = {
         'button': '0.5rem',
       },
       boxShadow: {
-        'card': '0 4px 6px -1px rgba(92, 61, 46, 0.1), 0 2px 4px -1px rgba(92, 61, 46, 0.06)',
-        'card-hover': '0 10px 15px -3px rgba(92, 61, 46, 0.2), 0 4px 6px -2px rgba(92, 61, 46, 0.1)',
+        'card': `0 4px 6px -1px ${shadows.brown.medium}, 0 2px 4px -1px ${shadows.brown.light}`,
+        'card-hover': `0 10px 15px -3px ${shadows.brown.dark}, 0 4px 6px -2px ${shadows.brown.medium}`,
+        'gold': `0 4px 6px -1px ${shadows.gold.light}`,
+        'gold-hover': `0 10px 15px -3px ${shadows.gold.medium}`,
       },
     },
   },

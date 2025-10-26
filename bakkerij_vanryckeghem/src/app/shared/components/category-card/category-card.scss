@@ -1,8 +1,10 @@
+@use '../../styles/colors' as *;
+
 .category-card {
-  background-color: white;
+  background-color: $white;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(92, 61, 46, 0.1), 0 2px 4px -1px rgba(92, 61, 46, 0.06);
+  box-shadow: 0 4px 6px -1px $shadow-brown-medium, 0 2px 4px -1px $shadow-brown-light;
   transition: all 0.3s ease;
 
   &.clickable {
@@ -10,7 +12,7 @@
 
     &:hover {
       transform: translateY(-8px);
-      box-shadow: 0 10px 15px -3px rgba(92, 61, 46, 0.2), 0 4px 6px -2px rgba(92, 61, 46, 0.1);
+      box-shadow: 0 10px 15px -3px $shadow-brown-dark, 0 4px 6px -2px $shadow-brown-medium;
     }
   }
 }
@@ -31,7 +33,7 @@
   width: 100%;
   height: 250px;
   overflow: hidden;
-  background-color: #F5F0E8;
+  background-color: $bakery-cream;
 
   img {
     width: 100%;
@@ -55,13 +57,13 @@
 .category-card-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #5C3D2E;
+  color: $bakery-brown;
   margin-bottom: 0.75rem;
   font-family: Georgia, Palatino, 'Times New Roman', serif;
 }
 
 .category-card-description {
-  color: #7A5A48;
+  color: $bakery-brown-light;
   line-height: 1.6;
   flex: 1;
 }

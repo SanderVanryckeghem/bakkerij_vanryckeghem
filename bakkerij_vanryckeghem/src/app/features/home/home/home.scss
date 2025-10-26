@@ -1,3 +1,5 @@
+@use '../../../shared/styles/colors' as *;
+
 .category-icon {
   font-size: 4rem;
   margin-bottom: 1rem;
@@ -10,13 +12,13 @@
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: rgba(245, 240, 232, 0.1);
-  color: #F5F0E8;
+  background-color: $overlay-cream;
+  color: $bakery-cream;
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: #F5A623;
-    color: #5C3D2E;
+    background-color: $bakery-gold;
+    color: $bakery-brown;
     transform: translateY(-2px);
   }
 }

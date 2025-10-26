@@ -1,3 +1,5 @@
+@use './app/shared/styles/colors' as *;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,14 +16,14 @@
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #F5F0E8;
-    color: #3D2820;
+    background-color: $bakery-cream;
+    color: $bakery-brown-dark;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, Palatino, 'Times New Roman', serif;
     font-weight: 700;
-    color: #5C3D2E;
+    color: $bakery-brown;
   }
 
   h1 {
@@ -60,13 +62,13 @@
   }
 
   a {
-    color: #F5A623;
+    color: $bakery-gold;
     text-decoration: none;
     transition: color 0.2s ease;
   }
 
   a:hover {
-    color: #D89419;
+    color: $bakery-gold-dark;
   }
 }
 

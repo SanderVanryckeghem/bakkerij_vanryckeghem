@@ -1,3 +1,5 @@
+@use '../../../shared/styles/colors' as *;
+
 .contact-info-list {
   display: flex;
   flex-direction: column;
@@ -9,14 +11,14 @@
   gap: 1.5rem;
   align-items: flex-start;
   padding: 1.5rem;
-  background: white;
+  background: $white;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px -1px rgba(92, 61, 46, 0.1), 0 2px 4px -1px rgba(92, 61, 46, 0.06);
+  box-shadow: 0 4px 6px -1px $shadow-brown-medium, 0 2px 4px -1px $shadow-brown-light;
   transition: all 0.3s ease;
 
   &:hover {
     transform: translateX(8px);
-    box-shadow: 0 10px 15px -3px rgba(92, 61, 46, 0.2), 0 4px 6px -2px rgba(92, 61, 46, 0.1);
+    box-shadow: 0 10px 15px -3px $shadow-brown-dark, 0 4px 6px -2px $shadow-brown-medium;
   }
 }
 
@@ -27,9 +29,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #F5F0E8 0%, #E8DED0 100%);
+  background: linear-gradient(135deg, $bakery-cream 0%, $bakery-cream-dark 100%);
   border-radius: 50%;
-  color: #5C3D2E;
+  color: $bakery-brown;
 }
 
 .contact-info-content {
@@ -39,7 +41,7 @@
 .contact-info-label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #F5A623;
+  color: $bakery-gold;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.25rem;
@@ -47,7 +49,7 @@
 
 .contact-info-value {
   font-size: 1.125rem;
-  color: #5C3D2E;
+  color: $bakery-brown;
   font-weight: 500;
 }
 
@@ -56,15 +58,15 @@
   transition: color 0.2s ease;
 
   &:hover {
-    color: #F5A623;
+    color: $bakery-gold;
   }
 }
 
 .opening-hours-list {
-  background: white;
+  background: $white;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(92, 61, 46, 0.1), 0 2px 4px -1px rgba(92, 61, 46, 0.06);
+  box-shadow: 0 4px 6px -1px $shadow-brown-medium, 0 2px 4px -1px $shadow-brown-light;
 }
 
 .opening-hours-item {
@@ -72,7 +74,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid #F5F0E8;
+  border-bottom: 1px solid $bakery-cream;
   transition: background-color 0.2s ease;
 
   &:last-child {
@@ -80,12 +82,12 @@
   }
 
   &:hover {
-    background-color: #FAFAF8;
+    background-color: $gray-light;
   }
 
   &.closed {
     .opening-hours-time {
-      color: #D4921F;
+      color: $bakery-gold-dark;
       font-weight: 600;
     }
   }
@@ -94,12 +96,12 @@
 .opening-hours-day {
   font-size: 1rem;
   font-weight: 600;
-  color: #5C3D2E;
+  color: $bakery-brown;
 }
 
 .opening-hours-time {
   font-size: 1rem;
-  color: #7A5A48;
+  color: $bakery-brown-light;
 }
 
 .map-container {
@@ -114,7 +116,7 @@
   height: 0;
   overflow: hidden;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px -1px rgba(92, 61, 46, 0.1), 0 2px 4px -1px rgba(92, 61, 46, 0.06);
+  box-shadow: 0 4px 6px -1px $shadow-brown-medium, 0 2px 4px -1px $shadow-brown-light;
   margin-bottom: 1.5rem;
 
   iframe {
@@ -138,17 +140,17 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #F5A623 0%, #D4921F 100%);
-  color: white;
+  background: linear-gradient(135deg, $bakery-gold 0%, $bakery-gold-dark 100%);
+  color: $white;
   text-decoration: none;
   border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px -1px rgba(245, 166, 35, 0.3);
+  box-shadow: 0 4px 6px -1px $shadow-gold-light;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(245, 166, 35, 0.4);
+    box-shadow: 0 10px 15px -3px $shadow-gold-medium;
   }
 }
