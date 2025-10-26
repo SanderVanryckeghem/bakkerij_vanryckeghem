@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Hero } from '../../../shared/components';
 
 interface OrderingMethod {
@@ -10,6 +10,12 @@ interface OrderingMethod {
   details?: string[];
 }
 
+interface FAQItem {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+}
+
 @Component({
   selector: 'app-bestellen',
   imports: [Hero],
@@ -17,6 +23,36 @@ interface OrderingMethod {
   styleUrl: './bestellen.scss',
 })
 export class Bestellen {
+  openFaqIndex = signal<number | null>(null);
+
+  faqItems: FAQItem[] = [
+    {
+      question: 'Hoe lang op voorhand moet ik bestellen?',
+      answer: 'Voor dagelijkse producten zoals brood raden we aan om minstens een dag op voorhand te bestellen. Voor speciale bestellingen zoals taarten of grote hoeveelheden vragen we om minimaal 48 uur op voorhand contact met ons op te nemen.',
+      isOpen: false
+    },
+    {
+      question: 'Kan ik mijn bestelling nog wijzigen?',
+      answer: 'U kunt uw bestelling wijzigen tot 24 uur voor het afhaaltijdstip. Neem hiervoor contact met ons op via telefoon of kom langs in de winkel. We helpen u graag verder.',
+      isOpen: false
+    },
+    {
+      question: 'Wat zijn de afhaal tijden?',
+      answer: 'U kunt uw bestelling afhalen tijdens onze openingsuren: Dinsdag t/m vrijdag van 07:00 - 18:00, zaterdag van 07:00 - 16:00 en zondag van 07:00 - 13:00. Op maandag zijn we gesloten.',
+      isOpen: false
+    },
+    {
+      question: 'Kan ik ook glutenvrije producten bestellen?',
+      answer: 'Ja, we hebben een selectie glutenvrije producten beschikbaar. Gelieve dit wel op voorhand door te geven bij uw bestelling, zodat we de beschikbaarheid kunnen garanderen.',
+      isOpen: false
+    },
+    {
+      question: 'Is er een minimum bestelbedrag?',
+      answer: 'Nee, er is geen minimum bestelbedrag. U kunt bij ons al een enkel broodje bestellen. Voor grote bestellingen bieden we graag een aangepaste service.',
+      isOpen: false
+    }
+  ];
+
   orderingMethods: OrderingMethod[] = [
     {
       title: 'Telefonisch',
@@ -41,4 +77,16 @@ export class Bestellen {
       actionLink: '#'
     }
   ];
+
+  toggleFaq(index: number) {
+    if (this.openFaqIndex() === index) {
+      this.openFaqIndex.set(null);
+    } else {
+      this.openFaqIndex.set(index);
+    }
+  }
+
+  isFaqOpen(index: number): boolean {
+    return this.openFaqIndex() === index;
+  }
 }
