@@ -59,8 +59,27 @@
       </div>
     </section>
 
-    <p class="text-lg text-center text-bakery-brown-light">
-      Content voor filosofie volgt in issue #13
-    </p>
+    <section class="mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-section text-bakery-brown mb-4">Onze Filosofie</h2>
+        <p class="text-lg text-bakery-brown-light">
+          De waarden die ons elke dag drijven
+        </p>
+      </div>
+
+      <div class="philosophy-grid">
+        @for (value of philosophy; track value.title) {
+          <div class="philosophy-card">
+            <div class="philosophy-icon">
+              <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                <path [attr.d]="value.icon"/>
+              </svg>
+            </div>
+            <h3 class="philosophy-title">{{ value.title }}</h3>
+            <p class="philosophy-description">{{ value.description }}</p>
+          </div>
+        }
+      </div>
+    </section>
   </div>
 </div>
