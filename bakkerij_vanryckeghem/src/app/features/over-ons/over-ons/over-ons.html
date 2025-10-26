@@ -5,8 +5,30 @@
   ></app-hero>
 
   <div class="container-custom py-16">
-    <p class="text-lg">
-      Content voor timeline, team en filosofie volgt in issues #11-13
+    <section class="mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-section text-bakery-brown mb-4">Onze Geschiedenis</h2>
+        <p class="text-lg text-bakery-brown-light">
+          Een reis door 100 jaar ambachtelijk vakmanschap
+        </p>
+      </div>
+
+      <div class="timeline">
+        @for (event of timeline; track event.year) {
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">{{ event.year }}</div>
+              <h3 class="timeline-title">{{ event.title }}</h3>
+              <p class="timeline-description">{{ event.description }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+    <p class="text-lg text-center text-bakery-brown-light">
+      Content voor team en filosofie volgt in issues #12-13
     </p>
   </div>
 </div>
