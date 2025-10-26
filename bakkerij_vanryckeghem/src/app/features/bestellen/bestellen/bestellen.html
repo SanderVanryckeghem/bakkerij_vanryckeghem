@@ -5,8 +5,51 @@
   ></app-hero>
 
   <div class="container-custom py-16">
+    <section class="mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-section text-bakery-brown mb-4">Kies uw bestelmethode</h2>
+        <p class="text-lg text-bakery-brown-light">
+          We bieden verschillende manieren om uw favoriete producten te bestellen
+        </p>
+      </div>
+
+      <div class="ordering-methods-grid">
+        @for (method of orderingMethods; track method.title) {
+          <div class="ordering-method-card">
+            <div class="ordering-method-icon">
+              <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                <path [attr.d]="method.icon"/>
+              </svg>
+            </div>
+
+            <h3 class="ordering-method-title">{{ method.title }}</h3>
+            <p class="ordering-method-description">{{ method.description }}</p>
+
+            @if (method.details) {
+              <div class="ordering-method-details">
+                @for (detail of method.details; track detail) {
+                  <p>{{ detail }}</p>
+                }
+              </div>
+            }
+
+            @if (method.actionText && method.actionLink) {
+              <a
+                [href]="method.actionLink"
+                class="ordering-method-action"
+                [target]="method.actionLink.startsWith('http') ? '_blank' : '_self'"
+                [rel]="method.actionLink.startsWith('http') ? 'noopener' : ''"
+              >
+                {{ method.actionText }}
+              </a>
+            }
+          </div>
+        }
+      </div>
+    </section>
+
     <p class="text-lg text-center text-bakery-brown-light">
-      Content voor bestelopties en instructies volgt in issues #18-19
+      Content voor instructies en FAQ volgt in issue #19
     </p>
   </div>
 </div>
