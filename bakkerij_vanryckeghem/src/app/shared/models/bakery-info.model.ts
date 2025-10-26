@@ -23,6 +23,7 @@ export interface SocialMedia {
 export interface BakeryInfo {
   name: string;
   description: string;
+  vatNumber?: string;
   contact: ContactInfo;
   openingHours: OpeningHours[];
   socialMedia?: SocialMedia;

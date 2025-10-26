@@ -95,6 +95,7 @@ export class ContentService {
   private mockBakeryInfo: BakeryInfo = {
     name: 'Bakkerij Vanryckeghem',
     description: 'Ambachtelijke bakkerij sinds 1923, waar traditie en kwaliteit samenkomen',
+    vatNumber: 'BE 0846.904.723',
     contact: {
       phone: '056 71 23 45',
       email: 'info@bakkerijvanryckeghem.be',

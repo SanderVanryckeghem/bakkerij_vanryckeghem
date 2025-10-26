@@ -62,6 +62,9 @@
     <div class="footer-bottom">
       <p class="copyright">
         © {{ currentYear }} {{ bakeryInfo.name }}. Alle rechten voorbehouden.
+        @if (bakeryInfo.vatNumber) {
+          <span class="vat-number"> | BTW: {{ bakeryInfo.vatNumber }}</span>
+        }
       </p>
     </div>
   </div>
