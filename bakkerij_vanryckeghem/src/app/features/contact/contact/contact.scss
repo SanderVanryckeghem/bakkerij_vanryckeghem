@@ -1,0 +1,103 @@
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(92, 61, 46, 0.1), 0 2px 4px -1px rgba(92, 61, 46, 0.06);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateX(8px);
+    box-shadow: 0 10px 15px -3px rgba(92, 61, 46, 0.2), 0 4px 6px -2px rgba(92, 61, 46, 0.1);
+  }
+}
+
+.contact-info-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F5F0E8 0%, #E8DED0 100%);
+  border-radius: 50%;
+  color: #5C3D2E;
+}
+
+.contact-info-content {
+  flex: 1;
+}
+
+.contact-info-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #F5A623;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.contact-info-value {
+  font-size: 1.125rem;
+  color: #5C3D2E;
+  font-weight: 500;
+}
+
+.contact-info-link {
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #F5A623;
+  }
+}
+
+.opening-hours-list {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(92, 61, 46, 0.1), 0 2px 4px -1px rgba(92, 61, 46, 0.06);
+}
+
+.opening-hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #F5F0E8;
+  transition: background-color 0.2s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: #FAFAF8;
+  }
+
+  &.closed {
+    .opening-hours-time {
+      color: #D4921F;
+      font-weight: 600;
+    }
+  }
+}
+
+.opening-hours-day {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5C3D2E;
+}
+
+.opening-hours-time {
+  font-size: 1rem;
+  color: #7A5A48;
+}

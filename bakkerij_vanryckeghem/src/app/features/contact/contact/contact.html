@@ -1,6 +1,53 @@
-<div class="container-custom py-16">
-  <h1 class="text-hero text-bakery-brown mb-4">Contact</h1>
-  <p class="text-lg mb-8">
-    Contact page - coming soon in issues #14-16
-  </p>
+<div>
+  <app-hero
+    title="Neem Contact Op"
+    subtitle="We helpen u graag verder"
+  ></app-hero>
+
+  <div class="container-custom py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+      <section>
+        <h2 class="text-section text-bakery-brown mb-8">Contactgegevens</h2>
+
+        <div class="contact-info-list">
+          @for (info of contactInfo; track info.type) {
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path [attr.d]="info.icon"/>
+                </svg>
+              </div>
+              <div class="contact-info-content">
+                <h3 class="contact-info-label">{{ info.label }}</h3>
+                @if (info.link) {
+                  <a [href]="info.link" class="contact-info-value contact-info-link" target="_blank" rel="noopener">
+                    {{ info.value }}
+                  </a>
+                } @else {
+                  <p class="contact-info-value">{{ info.value }}</p>
+                }
+              </div>
+            </div>
+          }
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-section text-bakery-brown mb-8">Openingsuren</h2>
+
+        <div class="opening-hours-list">
+          @for (hours of openingHours; track hours.day) {
+            <div class="opening-hours-item" [class.closed]="hours.hours === 'Gesloten'">
+              <span class="opening-hours-day">{{ hours.day }}</span>
+              <span class="opening-hours-time">{{ hours.hours }}</span>
+            </div>
+          }
+        </div>
+      </section>
+    </div>
+
+    <p class="text-lg text-center text-bakery-brown-light">
+      Content voor contactformulier en Google Maps volgt in issues #15-16
+    </p>
+  </div>
 </div>
