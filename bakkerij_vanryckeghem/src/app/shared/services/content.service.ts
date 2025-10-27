@@ -11,84 +11,96 @@ export class ContentService {
       name: 'Wit Brood',
       description: 'Klassiek wit brood, knapperig van buiten en zacht van binnen',
       category: 'Brood',
-      isAvailable: true
+      isAvailable: true,
+      imageUrl: '/images/Brood&banket.png'
     },
     {
       id: 2,
       name: 'Volkoren Brood',
       description: 'Gezond en voedzaam volkoren brood met een heerlijke smaak',
       category: 'Brood',
-      isAvailable: true
+      isAvailable: true,
+      imageUrl: '/images/Brood&banket.png'
     },
     {
       id: 3,
       name: 'Meergranen Brood',
       description: 'Rijk meergranenbrood met zaden en pitten',
       category: 'Brood',
-      isAvailable: true
+      isAvailable: true,
+      imageUrl: '/images/Brood&banket.png'
     },
     {
       id: 4,
       name: 'Desem Brood',
       description: 'Traditioneel desembrood met een unieke smaak',
       category: 'Brood',
-      isAvailable: true
+      isAvailable: true,
+      imageUrl: '/images/Brood&banket.png'
     },
     {
       id: 5,
       name: 'Croissant',
       description: 'Boterrijke croissant, elke ochtend vers gebakken',
       category: 'Gebak',
-      isAvailable: true
+      isAvailable: true,
+      imageUrl: '/images/Brood&banket.png'
     },
     {
       id: 6,
       name: 'Chocoladekoek',
       description: 'Smeuïge chocoladekoek met pure chocolade',
       category: 'Gebak',
-      isAvailable: true
+      isAvailable: true,
+      imageUrl: '/images/Brood&banket.png'
     },
     {
       id: 7,
       name: 'Appeltaart',
       description: 'Huisgemaakte appeltaart met verse appels en kaneel',
       category: 'Gebak',
-      isAvailable: true
+      isAvailable: true,
+      imageUrl: '/images/Brood&banket.png'
     },
     {
       id: 8,
       name: 'Rijstevlaai',
       description: 'Traditionele rijstevlaai met romige vulling',
       category: 'Gebak',
-      isAvailable: true
+      isAvailable: true,
+      imageUrl: '/images/Brood&banket.png'
     },
     {
       id: 9,
       name: 'Kerststol',
       description: 'Traditionele kerststol met amandelspijs en rozijnen',
       category: 'Specialiteiten',
-      isAvailable: false
+      isAvailable: false,
+      imageUrl: '/images/Brood&banket.png'
     },
     {
       id: 10,
       name: 'Paasbrood',
       description: 'Heerlijk paasbrood met amandelspijs',
       category: 'Specialiteiten',
-      isAvailable: false
+      isAvailable: false,
+      imageUrl: '/images/Brood&banket.png'
     },
     {
       id: 11,
       name: 'Speculaas',
       description: 'Krokante speculaas met traditionele kruiden',
       category: 'Specialiteiten',
-      isAvailable: true
+      isAvailable: true,
+      imageUrl: '/images/Brood&banket.png'
     },
     {
       id: 12,
       name: 'Taart op Bestelling',
       description: 'Gepersonaliseerde taarten voor elke gelegenheid',
       category: 'Specialiteiten',
-      isAvailable: true
+      isAvailable: true,
+      imageUrl: '/images/Brood&banket.png'
     }
   ];
 
