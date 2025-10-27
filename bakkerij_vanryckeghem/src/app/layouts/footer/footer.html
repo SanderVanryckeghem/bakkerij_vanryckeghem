@@ -4,10 +4,10 @@
       <div class="footer-section">
         <h3 class="footer-title">Openingsuren</h3>
         <ul class="hours-list">
-          @for (item of openingHours; track item.day) {
+          @for (item of compactOpeningHours; track item.days) {
             <li class="hours-item">
-              <span class="day">{{ item.day }}</span>
-              <span class="hours" [class.closed]="item.hours === 'Gesloten'">
+              <span class="day">{{ item.days }}</span>
+              <span class="hours" [class.closed]="item.isClosed">
                 {{ item.hours }}
               </span>
             </li>
