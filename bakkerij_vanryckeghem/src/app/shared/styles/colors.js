@@ -2,16 +2,16 @@
 // Used by both Tailwind config and SCSS files
 
 const colors = {
-  // Bakery Color Palette
+  // Bakery Color Palette - Subtle & Elegant
   bakery: {
-    cream: '#F5F5DC',
+    cream: '#F5F0E8',
     'cream-dark': '#E8DED0',
-    brown: '#5C3D2E',
-    'brown-dark': '#3D2820',
-    'brown-light': '#7A5A48',
-    gold: '#F5A623',
-    'gold-dark': '#D4921F',
-    'gold-light': '#F7B84B',
+    brown: '#2D2D2D',
+    'brown-dark': '#1A1A1A',
+    'brown-light': '#5A5A5A',
+    gold: '#D4A574',
+    'gold-dark': '#B8906A',
+    'gold-light': '#E0B98A',
   },
 
   // Neutral colors
@@ -38,15 +38,15 @@ const colors = {
 // Shadow colors (rgba values)
 const shadows = {
   brown: {
-    light: 'rgba(92, 61, 46, 0.06)',
-    medium: 'rgba(92, 61, 46, 0.1)',
-    dark: 'rgba(92, 61, 46, 0.2)',
-    darker: 'rgba(92, 61, 46, 0.08)',
-    darkest: 'rgba(92, 61, 46, 0.15)',
+    light: 'rgba(45, 45, 45, 0.06)',
+    medium: 'rgba(45, 45, 45, 0.1)',
+    dark: 'rgba(45, 45, 45, 0.2)',
+    darker: 'rgba(45, 45, 45, 0.08)',
+    darkest: 'rgba(45, 45, 45, 0.15)',
   },
   gold: {
-    light: 'rgba(245, 166, 35, 0.3)',
-    medium: 'rgba(245, 166, 35, 0.4)',
+    light: 'rgba(212, 165, 116, 0.3)',
+    medium: 'rgba(212, 165, 116, 0.4)',
   },
   black: 'rgba(0, 0, 0, 0.3)',
 };
@@ -55,8 +55,8 @@ const shadows = {
 const overlays = {
   cream: 'rgba(245, 240, 232, 0.1)',
   'cream-medium': 'rgba(245, 240, 232, 0.7)',
-  'brown-dark': 'rgba(61, 40, 32, 0.85)',
-  brown: 'rgba(92, 61, 46, 0.7)',
+  'brown-dark': 'rgba(26, 26, 26, 0.85)',
+  brown: 'rgba(45, 45, 45, 0.7)',
 };
 
 module.exports = { colors, shadows, overlays };
