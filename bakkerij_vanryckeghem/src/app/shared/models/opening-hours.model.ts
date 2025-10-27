@@ -6,7 +6,7 @@ export interface OpeningHours {
 
 export const OPENING_HOURS: OpeningHours[] = [
   { day: 'Maandag', hours: 'Gesloten', isClosed: true },
-  { day: 'Dinsdag', hours: 'Gesloten' },
+  { day: 'Dinsdag', hours: 'Gesloten', isClosed: true },
   { day: 'Woensdag', hours: '08:30 – 12:30 / 13:45 – 19:00' },
   { day: 'Donderdag', hours: '08:30 – 12:30 / 13:45 – 19:00' },
   { day: 'Vrijdag', hours: '08:30 – 12:30 / 13:45 – 19:00' },

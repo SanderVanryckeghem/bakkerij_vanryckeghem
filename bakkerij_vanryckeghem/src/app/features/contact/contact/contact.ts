@@ -44,5 +44,15 @@ export class Contact {
     }
   ];
 
-  openingHours = this.contentService.getOpeningHours();
+  openingHours = this.getOpeningHoursWithToday();
+
+  private getOpeningHoursWithToday() {
+    const hours = this.contentService.getOpeningHours();
+    const today = new Date().getDay();
+
+    return hours.map((hour, index) => ({
+      ...hour,
+      isToday: index === (today === 0 ? 6 : today - 1)
+    }));
+  }
 }

@@ -85,10 +85,15 @@
     background-color: $gray-light;
   }
 
-  &.closed {
-    .opening-hours-time {
-      color: $bakery-gold-dark;
+  &.today {
+    .opening-hours-day {
+      color: $bakery-gold;
       font-weight: 600;
+    }
+
+    .opening-hours-time {
+      color: $bakery-gold;
+      font-weight: 500;
     }
   }
 }

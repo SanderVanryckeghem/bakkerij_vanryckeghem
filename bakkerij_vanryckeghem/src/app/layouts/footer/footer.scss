@@ -47,6 +47,18 @@
   &:last-child {
     border-bottom: none;
   }
+
+  &.today {
+    .day {
+      color: $bakery-gold;
+      font-weight: 600;
+    }
+
+    .hours {
+      color: $bakery-gold;
+      font-weight: 500;
+    }
+  }
 }
 
 .day {
@@ -55,11 +67,6 @@
 
 .hours {
   color: $bakery-cream;
-
-  &.closed {
-    color: $bakery-gold;
-    font-style: italic;
-  }
 }
 
 .address {

@@ -5,9 +5,9 @@
         <h3 class="footer-title">Openingsuren</h3>
         <ul class="hours-list">
           @for (item of compactOpeningHours; track item.days) {
-            <li class="hours-item">
+            <li class="hours-item" [class.today]="item.isToday">
               <span class="day">{{ item.days }}</span>
-              <span class="hours" [class.closed]="item.isClosed">
+              <span class="hours">
                 {{ item.hours }}
               </span>
             </li>

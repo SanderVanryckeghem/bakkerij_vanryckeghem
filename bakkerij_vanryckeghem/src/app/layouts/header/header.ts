@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ContentService } from '../../shared/services';
 
 interface NavItem {
   label: string;
@@ -13,7 +14,10 @@ interface NavItem {
   styleUrl: './header.scss',
 })
 export class Header {
+  private contentService = inject(ContentService);
+
   mobileMenuOpen = signal(false);
+  bakeryInfo = this.contentService.getBakeryInfo();
 
   navItems: NavItem[] = [
     { label: 'Home', route: '/' },
