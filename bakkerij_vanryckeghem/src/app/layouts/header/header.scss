@@ -1,8 +1,7 @@
 @use '../../shared/styles/colors' as *;
 
 .header {
-  background-color: $white;
-  box-shadow: 0 2px 4px $shadow-brown-medium;
+  background-color: $bakery-cream;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -12,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
 .logo-container {
@@ -40,13 +39,13 @@
 
 .logo-text {
   font-family: Georgia, Palatino, 'Times New Roman', serif;
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 .desktop-nav {
   display: none;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
 
   @media (min-width: 768px) {
@@ -55,29 +54,21 @@
 }
 
 .nav-link {
-  color: $bakery-brown;
+  color: $bakery-brown-dark;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 0.95rem;
   padding: 0.5rem 0;
   position: relative;
   transition: color 0.2s ease;
 
   &:hover {
-    color: $bakery-gold;
+    color: $bakery-brown;
   }
 
   &.active {
-    color: $bakery-gold;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: $bakery-gold;
-    }
+    color: $bakery-brown;
+    font-weight: 500;
   }
 }
 
