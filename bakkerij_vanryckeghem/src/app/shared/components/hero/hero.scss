@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  min-height: 500px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@
   margin-bottom: 3rem;
 
   @media (min-width: 768px) {
-    min-height: 600px;
+    min-height: 350px;
   }
 }
 
@@ -36,7 +36,7 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .hero-title {
