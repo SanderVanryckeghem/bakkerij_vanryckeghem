@@ -121,8 +121,7 @@ export class ContentService {
     },
     openingHours: OPENING_HOURS,
     socialMedia: {
-      facebook: 'https://facebook.com/bakkerijvanryckeghem',
-      instagram: 'https://instagram.com/bakkerijvanryckeghem'
+      facebook: 'https://facebook.com/bakkerijvanryckeghem'
     }
   };
 
