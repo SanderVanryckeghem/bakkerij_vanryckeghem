@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Hero } from '../../../shared/components/hero/hero';
 import { CategoryCard } from '../../../shared/components/category-card/category-card';
@@ -13,4 +13,18 @@ import { ContentService } from '../../../shared/services';
 export class Home {
   private contentService = inject(ContentService);
   bakeryInfo = this.contentService.getBakeryInfo();
+  faqItems = this.contentService.getFAQs();
+  openFaqIndex = signal<number | null>(null);
+
+  toggleFaq(index: number) {
+    if (this.openFaqIndex() === index) {
+      this.openFaqIndex.set(null);
+    } else {
+      this.openFaqIndex.set(index);
+    }
+  }
+
+  isFaqOpen(index: number): boolean {
+    return this.openFaqIndex() === index;
+  }
 }

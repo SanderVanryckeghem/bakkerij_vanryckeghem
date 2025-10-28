@@ -49,4 +49,41 @@
       </a>
     </div>
   </section>
+
+  <section class="mb-16">
+    <div class="text-center mb-12">
+      <h2 class="text-section text-bakery-brown mb-4">Veelgestelde Vragen</h2>
+      <p class="text-lg text-bakery-brown-light">
+        Heeft u vragen? Hier vindt u de antwoorden
+      </p>
+    </div>
+
+    <div class="faq-container">
+      @for (faq of faqItems; track $index) {
+        <div class="faq-item" [class.open]="isFaqOpen($index)">
+          <button
+            class="faq-question"
+            (click)="toggleFaq($index)"
+            [attr.aria-expanded]="isFaqOpen($index)"
+          >
+            <span>{{ faq.question }}</span>
+            <svg
+              class="faq-icon"
+              [class.rotated]="isFaqOpen($index)"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer-wrapper" [class.open]="isFaqOpen($index)">
+            <div class="faq-answer">
+              {{ faq.answer }}
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
 </div>
