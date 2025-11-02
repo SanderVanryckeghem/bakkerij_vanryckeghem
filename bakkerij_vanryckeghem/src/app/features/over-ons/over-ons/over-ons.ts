@@ -11,7 +11,7 @@ interface TeamMember {
   name: string;
   role: string;
   description: string;
-  imageUrl?: string;
+  imageUrl: string;
 }
 
 interface PhilosophyValue {
@@ -54,17 +54,20 @@ export class OverOns {
     {
       name: 'Rik Vanryckeghem',
       role: 'Meester-Bakker',
-      description: 'Al meer dan 40 jaar actief in de bakkerij. Rik is de spil van ons bedrijf en staat bekend om zijn perfectie en vakmanschap.'
+      description: 'Al meer dan 40 jaar actief in de bakkerij. Rik is de spil van ons bedrijf en staat bekend om zijn perfectie en vakmanschap.',
+      imageUrl: '/images/team/rik.jpg'
     },
     {
       name: 'Olivier Vanryckeghem',
       role: 'Patissier',
-      description: 'Olivier tovert dagelijks de mooiste taarten en gebakjes. Haar creativiteit en oog voor detail maken elk stuk uniek.'
+      description: 'Olivier tovert dagelijks de mooiste taarten en gebakjes. Haar creativiteit en oog voor detail maken elk stuk uniek.',
+      imageUrl: '/images/team/olivier_cartoon.png'
     },
     {
       name: 'Tamara Mahieu',
       role: 'Winkelverantwoordelijke',
-      description: 'Tamara zorgt ervoor dat onze klanten zich altijd welkom voelen en helpt hen met een glimlach aan de perfecte keuze.'
+      description: 'Tamara zorgt ervoor dat onze klanten zich altijd welkom voelen en helpt hen met een glimlach aan de perfecte keuze.',
+      imageUrl: '/images/team/tamara_cartoon.png'
     }
   ];
 
