@@ -53,13 +53,13 @@ export class OverOns {
   team: TeamMember[] = [
     {
       name: 'Rik Vanryckeghem',
-      role: 'Meester-Bakker',
+      role: 'Bakker',
       description: 'Al meer dan 40 jaar actief in de bakkerij. Rik is de spil van ons bedrijf en staat bekend om zijn perfectie en vakmanschap.',
       imageUrl: '/images/team/rik.jpg'
     },
     {
       name: 'Olivier Vanryckeghem',
-      role: 'Patissier',
+      role: 'Bakker',
       description: 'Olivier tovert dagelijks de mooiste taarten en gebakjes. Haar creativiteit en oog voor detail maken elk stuk uniek.',
       imageUrl: '/images/team/olivier_cartoon.png'
     },
