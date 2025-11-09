@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Hero } from '../../../shared/components';
 import { ContentService } from '../../../shared/services';
+import { SeoService } from '../../../core/services/seo.service';
 
 interface ContactInfo {
   type: string;
@@ -16,8 +17,9 @@ interface ContactInfo {
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-export class Contact {
+export class Contact implements OnInit {
   private contentService = inject(ContentService);
+  private seoService = inject(SeoService);
   private bakeryInfo = this.contentService.getBakeryInfo();
 
   contactInfo: ContactInfo[] = [
@@ -45,6 +47,15 @@ export class Contact {
   ];
 
   openingHours = this.getOpeningHoursWithToday();
+
+  ngOnInit() {
+    this.seoService.updateMetaTags({
+      title: 'Contact - Bakkerij Vanryckeghem | Overleiestraat 38, Harelbeke',
+      description: 'Neem contact op met Bakkerij Vanryckeghem. Bezoek ons in de Overleiestraat 38, Harelbeke of bel ons op 056 71 23 45.',
+      keywords: 'contact, adres, openingsuren, telefoon, Harelbeke, Overleiestraat',
+      url: 'https://www.bakkerijvanryckeghem.be/contact'
+    });
+  }
 
   private getOpeningHoursWithToday() {
     const hours = this.contentService.getOpeningHours();

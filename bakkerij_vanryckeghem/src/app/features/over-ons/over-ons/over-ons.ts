@@ -1,5 +1,6 @@
-import { Component, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, OnInit, inject } from '@angular/core';
 import { Hero } from '../../../shared/components';
+import { SeoService } from '../../../core/services/seo.service';
 
 interface TimelineEvent {
   year: string;
@@ -26,7 +27,9 @@ interface PhilosophyValue {
   templateUrl: './over-ons.html',
   styleUrl: './over-ons.scss',
 })
-export class OverOns implements AfterViewInit {
+export class OverOns implements OnInit, AfterViewInit {
+  private seoService = inject(SeoService);
+
   constructor(private elementRef: ElementRef) {}
   philosophy: PhilosophyValue[] = [
     {
@@ -88,6 +91,15 @@ export class OverOns implements AfterViewInit {
       description: 'Bakkerij Vanryckeghem staat nog altijd bekend als een authentieke familiebakkerij, geworteld in traditie maar met oog voor vernieuwing. Generatie na generatie blijft dezelfde passie voor brood, gebak en ambacht centraal staan.'
     }
   ];
+
+  ngOnInit() {
+    this.seoService.updateMetaTags({
+      title: 'Over Ons - Bakkerij Vanryckeghem | Familietraditie sinds de jaren \'40',
+      description: 'Leer onze familiegeschiedenis kennen. Van kleine bakkerij in de jaren \'40 tot gevestigde naam in Harelbeke. Passie voor ambacht door de generaties heen.',
+      keywords: 'over ons, geschiedenis, familiegeschiedenis, Harelbeke, ambachtelijke bakkerij',
+      url: 'https://www.bakkerijvanryckeghem.be/over-ons'
+    });
+  }
 
   ngAfterViewInit() {
     const observer = new IntersectionObserver(

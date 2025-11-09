@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Hero } from '../../../shared/components';
 import { ContentService } from '../../../shared/services';
 import { CategoryFilter, CATEGORY_FILTERS } from '../../../shared/constants/categories';
+import { SeoService } from '../../../core/services/seo.service';
 
 @Component({
   selector: 'app-assortiment',
@@ -13,6 +14,7 @@ import { CategoryFilter, CATEGORY_FILTERS } from '../../../shared/constants/cate
 export class Assortiment implements OnInit {
   private contentService = inject(ContentService);
   private route = inject(ActivatedRoute);
+  private seoService = inject(SeoService);
 
   selectedCategory = signal<CategoryFilter>('Alle');
   categories = CATEGORY_FILTERS;
@@ -27,6 +29,13 @@ export class Assortiment implements OnInit {
   });
 
   ngOnInit() {
+    this.seoService.updateMetaTags({
+      title: 'Ons Assortiment - Bakkerij Vanryckeghem',
+      description: 'Ontdek ons ruim assortiment aan ambachtelijk brood, gebak en ontbijtkoeken. Dagvers gebakken met de beste ingrediënten.',
+      keywords: 'assortiment, brood, gebak, ontbijtkoeken, vers gebakken, ambachtelijk',
+      url: 'https://www.bakkerijvanryckeghem.be/assortiment'
+    });
+
     this.route.queryParams.subscribe(params => {
       const category = params['category'] as CategoryFilter;
       if (category && CATEGORY_FILTERS.includes(category)) {

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Hero } from '../../../shared/components';
+import { SeoService } from '../../../core/services/seo.service';
 
 interface OrderingMethod {
   title: string;
@@ -16,7 +17,8 @@ interface OrderingMethod {
   templateUrl: './bestellen.html',
   styleUrl: './bestellen.scss',
 })
-export class Bestellen {
+export class Bestellen implements OnInit {
+  private seoService = inject(SeoService);
   orderingMethods: OrderingMethod[] = [
     {
       title: 'Telefonisch',
@@ -34,4 +36,13 @@ export class Bestellen {
       actionLink: 'https://maps.google.com/?q=Overleiestraat+38+8530+Harelbeke'
     }
   ];
+
+  ngOnInit() {
+    this.seoService.updateMetaTags({
+      title: 'Bestellen - Bakkerij Vanryckeghem | Telefonisch of in de winkel',
+      description: 'Bestel uw vers brood en gebak bij Bakkerij Vanryckeghem. Telefonisch op 056 71 23 45 of kom langs in onze winkel.',
+      keywords: 'bestellen, brood bestellen, gebak bestellen, telefonisch, winkel',
+      url: 'https://www.bakkerijvanryckeghem.be/bestellen'
+    });
+  }
 }
