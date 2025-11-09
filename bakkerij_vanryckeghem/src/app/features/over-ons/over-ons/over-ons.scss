@@ -53,19 +53,32 @@
     justify-content: flex-start;
   }
 
+  &.timeline-item-visible .timeline-marker {
+    @media (max-width: 768px) {
+      animation: markerPulseMobile 1s ease 0.5s;
+    }
+  }
+
   &:nth-child(odd).timeline-item-visible .timeline-marker {
     animation: markerPulseRight 1s ease 0.5s;
+
+    @media (max-width: 768px) {
+      animation: markerPulseMobile 1s ease 0.5s;
+    }
   }
 
   &:nth-child(even).timeline-item-visible .timeline-marker {
     animation: markerPulseLeft 1s ease 0.5s;
+
+    @media (max-width: 768px) {
+      animation: markerPulseMobile 1s ease 0.5s;
+    }
   }
 }
 
 
 .timeline-marker {
   position: absolute;
-  right: 50%;
   top: 0;
   width: 24px;
   height: 24px;
@@ -75,20 +88,24 @@
   transform-origin: center;
   z-index: 2;
 
-  .timeline-item:nth-child(odd) & {
-    transform: translateX(50%);
-  }
-
-  .timeline-item:nth-child(even) & {
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   @media (max-width: 768px) {
-    right: auto;
-    left: 30px;
-    transform: translateX(-50%);
+    right: auto !important;
+    left: 30px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  @media (min-width: 769px) {
+    .timeline-item:nth-child(odd) & {
+      right: 50%;
+      left: auto;
+      transform: translateX(50%);
+    }
+
+    .timeline-item:nth-child(even) & {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -280,6 +297,17 @@
 }
 
 @keyframes markerPulseLeft {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    box-shadow: 0 0 0 0 rgba($bakery-gold, 0.7);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+    box-shadow: 0 0 0 10px rgba($bakery-gold, 0);
+  }
+}
+
+@keyframes markerPulseMobile {
   0%, 100% {
     transform: translateX(-50%) scale(1);
     box-shadow: 0 0 0 0 rgba($bakery-gold, 0.7);
