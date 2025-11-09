@@ -8,21 +8,21 @@ export class ContentService {
   private mockCategories: Category[] = [
     {
       title: 'Brood',
-      description: 'Ambachtelijk brood, dagvers gebakken.',
+      description: 'Zin in een traditioneel wit, bruin of meergranen brood we hebben het allemaal',
       routerLink: '/assortiment',
       queryParams: { category: 'Brood' }
     },
     {
       title: 'Gebak',
-      description: 'Heerlijk gebak voor elke gelegenheid.',
+      description: 'Zin in een lekker stukje taart we hebben ze in bijna alle vormen en smaken',
       routerLink: '/assortiment',
       queryParams: { category: 'Gebak' }
     },
     {
-      title: 'Specialiteiten',
-      description: 'Ontdek onze seizoensgebonden verwenningen.',
+      title: 'Ontbijtkoeken',
+      description: 'Zin in een lekkere chocoladekoek, croissant, boterkoek en nog veel meer neem een kijkje in ons assortiment',
       routerLink: '/assortiment',
-      queryParams: { category: 'Specialiteiten' }
+      queryParams: { category: 'Ontbijtkoeken' }
     }
   ];
   private mockProducts: Product[] = [
@@ -102,7 +102,7 @@ export class ContentService {
       id: 9,
       name: 'Kerststol',
       description: 'Traditionele kerststol met amandelspijs en rozijnen',
-      category: 'Specialiteiten',
+      category: 'Ontbijtkoeken',
       isAvailable: false,
       imageUrl: '/images/Brood&banket.png'
     },
@@ -110,7 +110,7 @@ export class ContentService {
       id: 10,
       name: 'Paasbrood',
       description: 'Heerlijk paasbrood met amandelspijs',
-      category: 'Specialiteiten',
+      category: 'Ontbijtkoeken',
       isAvailable: false,
       imageUrl: '/images/Brood&banket.png'
     },
@@ -118,7 +118,7 @@ export class ContentService {
       id: 11,
       name: 'Speculaas',
       description: 'Krokante speculaas met traditionele kruiden',
-      category: 'Specialiteiten',
+      category: 'Ontbijtkoeken',
       isAvailable: true,
       imageUrl: '/images/Brood&banket.png'
     },
@@ -126,7 +126,7 @@ export class ContentService {
       id: 12,
       name: 'Taart op Bestelling',
       description: 'Gepersonaliseerde taarten voor elke gelegenheid',
-      category: 'Specialiteiten',
+      category: 'Ontbijtkoeken',
       isAvailable: true,
       imageUrl: '/images/Brood&banket.png'
     }

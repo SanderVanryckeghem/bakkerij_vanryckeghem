@@ -1,6 +1,6 @@
 import { ProductCategory } from '../models';
 
-export const PRODUCT_CATEGORIES: ProductCategory[] = ['Brood', 'Gebak', 'Specialiteiten'];
+export const PRODUCT_CATEGORIES: ProductCategory[] = ['Brood', 'Gebak', 'Ontbijtkoeken'];
 
 export type CategoryFilter = 'Alle' | ProductCategory;
 

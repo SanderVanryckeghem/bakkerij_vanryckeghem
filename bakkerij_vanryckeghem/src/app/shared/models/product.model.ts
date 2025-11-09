@@ -1,4 +1,4 @@
-export type ProductCategory = 'Brood' | 'Gebak' | 'Specialiteiten';
+export type ProductCategory = 'Brood' | 'Gebak' | 'Ontbijtkoeken';
 
 export interface Product {
   id: number;
