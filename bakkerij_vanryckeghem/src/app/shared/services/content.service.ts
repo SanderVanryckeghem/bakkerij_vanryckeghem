@@ -12,7 +12,15 @@ export class ContentService {
       description: 'Klassiek wit brood, knapperig van buiten en zacht van binnen',
       category: 'Brood',
       isAvailable: true,
-      imageUrl: '/images/Brood&banket.png'
+      imageUrl: '/images/product/bread/wit.png'
+    },
+    {
+      id: 2,
+      name: 'Bruin Brood',
+      description: 'Klassiek bruin brood, knapperig van buiten en zacht van binnen',
+      category: 'Brood',
+      isAvailable: true,
+      imageUrl: '/images/product/bread/bruin.png'
     },
     {
       id: 2,
@@ -20,7 +28,7 @@ export class ContentService {
       description: 'Gezond en voedzaam volkoren brood met een heerlijke smaak',
       category: 'Brood',
       isAvailable: true,
-      imageUrl: '/images/Brood&banket.png'
+      imageUrl: '/images/product/bread/volkoren.png'
     },
     {
       id: 3,
