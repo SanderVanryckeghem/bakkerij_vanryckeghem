@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { Hero } from '../../../shared/components';
 
 interface TimelineEvent {
@@ -26,7 +26,8 @@ interface PhilosophyValue {
   templateUrl: './over-ons.html',
   styleUrl: './over-ons.scss',
 })
-export class OverOns {
+export class OverOns implements AfterViewInit {
+  constructor(private elementRef: ElementRef) {}
   philosophy: PhilosophyValue[] = [
     {
       title: 'Ambachtelijk',
@@ -93,4 +94,23 @@ export class OverOns {
       description: 'Bakkerij Vanryckeghem staat nog altijd bekend als een authentieke familiebakkerij, geworteld in traditie maar met oog voor vernieuwing. Generatie na generatie blijft dezelfde passie voor brood, gebak en ambacht centraal staan.'
     }
   ];
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('timeline-item-visible');
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    );
+
+    const timelineItems = this.elementRef.nativeElement.querySelectorAll('.timeline-item');
+    timelineItems.forEach((item: Element) => observer.observe(item));
+  }
 }
