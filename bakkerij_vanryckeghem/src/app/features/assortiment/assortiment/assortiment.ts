@@ -1,4 +1,5 @@
-import { Component, signal, computed, inject } from '@angular/core';
+import { Component, signal, computed, inject, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Hero } from '../../../shared/components';
 import { ContentService } from '../../../shared/services';
 import { CategoryFilter, CATEGORY_FILTERS } from '../../../shared/constants/categories';
@@ -9,8 +10,9 @@ import { CategoryFilter, CATEGORY_FILTERS } from '../../../shared/constants/cate
   templateUrl: './assortiment.html',
   styleUrl: './assortiment.scss',
 })
-export class Assortiment {
+export class Assortiment implements OnInit {
   private contentService = inject(ContentService);
+  private route = inject(ActivatedRoute);
 
   selectedCategory = signal<CategoryFilter>('Alle');
   categories = CATEGORY_FILTERS;
@@ -23,6 +25,15 @@ export class Assortiment {
     }
     return this.products.filter(p => p.category === category);
   });
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      const category = params['category'] as CategoryFilter;
+      if (category && CATEGORY_FILTERS.includes(category)) {
+        this.selectedCategory.set(category);
+      }
+    });
+  }
 
   selectCategory(category: CategoryFilter) {
     this.selectedCategory.set(category);

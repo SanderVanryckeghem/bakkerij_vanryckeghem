@@ -11,5 +11,6 @@ export class CategoryCard {
   title = input.required<string>();
   description = input.required<string>();
   imageUrl = input<string>();
-  link = input<string>();
+  routerLink = input<string>();
+  queryParams = input<{ [key: string]: string }>();
 }

@@ -1,5 +1,6 @@
 export interface Category {
   title: string;
   description: string;
-  link: string;
+  routerLink: string;
+  queryParams?: { [key: string]: string };
 }

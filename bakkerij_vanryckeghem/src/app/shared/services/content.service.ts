@@ -9,17 +9,20 @@ export class ContentService {
     {
       title: 'Brood',
       description: 'Ambachtelijk brood, dagvers gebakken.',
-      link: '/assortiment'
+      routerLink: '/assortiment',
+      queryParams: { category: 'Brood' }
     },
     {
       title: 'Gebak',
       description: 'Heerlijk gebak voor elke gelegenheid.',
-      link: '/assortiment'
+      routerLink: '/assortiment',
+      queryParams: { category: 'Gebak' }
     },
     {
       title: 'Specialiteiten',
       description: 'Ontdek onze seizoensgebonden verwenningen.',
-      link: '/assortiment'
+      routerLink: '/assortiment',
+      queryParams: { category: 'Specialiteiten' }
     }
   ];
   private mockProducts: Product[] = [

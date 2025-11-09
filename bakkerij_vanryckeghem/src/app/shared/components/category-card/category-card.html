@@ -1,6 +1,6 @@
-<div class="category-card" [class.clickable]="link()">
-  @if (link()) {
-    <a [routerLink]="link()" class="category-card-link">
+<div class="category-card" [class.clickable]="routerLink()">
+  @if (routerLink()) {
+    <a [routerLink]="routerLink()" [queryParams]="queryParams()" class="category-card-link">
       <div class="category-card-content">
         @if (imageUrl()) {
           <div class="category-card-image">
