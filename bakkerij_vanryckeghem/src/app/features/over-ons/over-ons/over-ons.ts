@@ -73,29 +73,24 @@ export class OverOns {
 
   timeline: TimelineEvent[] = [
     {
-      year: '1923',
-      title: 'De geboorte van een passie',
-      description: 'Bakkerij Vanryckeghem werd opgericht door onze overgrootvader. Met eenvoudige middelen, maar met een enorme liefde voor het ambacht, legde hij de basis voor wat wij vandaag zijn.'
+      year: 'Jaren \'40',
+      title: 'Het begin van een familieverhaal',
+      description: 'In de jaren veertig leggen grootvader André en grootmoeder Elisabeth de basis van wat later een gevestigde naam zou worden in de streek. Ze starten een kleine bakkerij en kruidenierszaak, waar alles nog ambachtelijk wordt gemaakt. Het was een echte familiezaak, met hard werk en veel passie voor het bakkersvak.'
     },
     {
-      year: '1950',
-      title: 'Uitbreiding en innovatie',
-      description: 'De tweede generatie breidde de bakkerij uit met nieuwe ovens en technieken, terwijl de traditionele recepten behouden bleven.'
+      year: 'Jaren \'90',
+      title: 'Groei en vernieuwing',
+      description: 'Doorheen de jaren groeit het klantenbestand gestaag. De kwaliteit en het vakmanschap van de bakkerij worden steeds meer gewaardeerd, waardoor het werk toeneemt. In 1993 sluit zoon Olivier zich aan bij de familiezaak. Dat markeert een belangrijke stap in de verdere professionalisering van de bakkerij. Om de groei bij te benen, wordt de bakkerij volledig vernieuwd en uitgerust met een moderne infrastructuur. Zo kunnen ze blijven voldoen aan de stijgende vraag, zonder hun ambachtelijke karakter te verliezen.'
     },
     {
-      year: '1980',
-      title: 'Familietraditie voortzetten',
-      description: 'De derde generatie nam de leiding over en introduceerde nieuwe specialiteiten, steeds met respect voor de ambachtelijke traditie.'
+      year: '2012',
+      title: 'De derde generatie aan het roer',
+      description: 'Na vele jaren hard werk dragen Eric en Christelle met trots de fakkel over aan hun zoon Olivier en zijn partner Tamara. Met deze derde generatie blijft de familiegeschiedenis van Bakkerij Vanryckeghem verder leven. Olivier en Tamara zetten sterk in op kwaliteit, versheid en een warm contact met hun klanten. Ze bouwen voort op de traditie die door de vorige generaties werd gelegd, maar brengen tegelijk een moderne aanpak en een frisse visie in de zaak.'
     },
     {
-      year: '2000',
-      title: 'Modernisering met respect',
-      description: 'We investeerden in moderne apparatuur zonder de ambachtelijke aanpak los te laten. Kwaliteit en smaak bleven centraal staan.'
-    },
-    {
-      year: '2023',
-      title: 'Een eeuw vakmanschap',
-      description: 'Vandaag, 100 jaar later, bakken we nog steeds met dezelfde passie en toewijding als onze overgrootvader. De vierde generatie zet de traditie voort.'
+      year: 'Vandaag',
+      title: 'Geworteld in traditie',
+      description: 'Bakkerij Vanryckeghem staat nog altijd bekend als een authentieke familiebakkerij, geworteld in traditie maar met oog voor vernieuwing. Generatie na generatie blijft dezelfde passie voor brood, gebak en ambacht centraal staan.'
     }
   ];
 }
