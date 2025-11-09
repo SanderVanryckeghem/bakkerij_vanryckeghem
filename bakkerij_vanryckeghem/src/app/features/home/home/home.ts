@@ -13,6 +13,7 @@ import { ContentService } from '../../../shared/services';
 export class Home {
   private contentService = inject(ContentService);
   bakeryInfo = this.contentService.getBakeryInfo();
+  categories = this.contentService.getCategories();
   faqItems = this.contentService.getFAQs();
   openFaqIndex = signal<number | null>(null);
 

@@ -15,23 +15,13 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <app-category-card
-        title="Brood"
-        description="Ambachtelijk brood, dagvers gebakken."
-        link="/assortiment"
-      ></app-category-card>
-
-      <app-category-card
-        title="Gebak"
-        description="Heerlijk gebak voor elke gelegenheid."
-        link="/assortiment"
-      ></app-category-card>
-
-      <app-category-card
-        title="Specialiteiten"
-        description="Ontdek onze seizoensgebonden verwenningen."
-        link="/assortiment"
-      ></app-category-card>
+      @for (category of categories; track category.title) {
+        <app-category-card
+          [title]="category.title"
+          [description]="category.description"
+          [link]="category.link"
+        ></app-category-card>
+      }
     </div>
   </section>
 

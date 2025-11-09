@@ -1,10 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Product, BakeryInfo, OPENING_HOURS, FAQItem } from '../models';
+import { Product, BakeryInfo, OPENING_HOURS, FAQItem, Category } from '../models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContentService {
+  private mockCategories: Category[] = [
+    {
+      title: 'Brood',
+      description: 'Ambachtelijk brood, dagvers gebakken.',
+      link: '/assortiment'
+    },
+    {
+      title: 'Gebak',
+      description: 'Heerlijk gebak voor elke gelegenheid.',
+      link: '/assortiment'
+    },
+    {
+      title: 'Specialiteiten',
+      description: 'Ontdek onze seizoensgebonden verwenningen.',
+      link: '/assortiment'
+    }
+  ];
   private mockProducts: Product[] = [
     {
       id: 1,
@@ -178,5 +195,9 @@ export class ContentService {
 
   getFAQs(): FAQItem[] {
     return [...this.mockFAQs];
+  }
+
+  getCategories(): Category[] {
+    return [...this.mockCategories];
   }
 }
