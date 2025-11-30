@@ -18,10 +18,10 @@
       <div class="footer-section">
         <h3 class="footer-title">Adres</h3>
         <address class="address">
-          <p>{{ bakeryInfo.contact.address.street }} {{ bakeryInfo.contact.address.number }}</p>
-          <p>{{ bakeryInfo.contact.address.zip }} {{ bakeryInfo.contact.address.city }}</p>
-          @if (bakeryInfo.contact.address.country) {
-            <p>{{ bakeryInfo.contact.address.country }}</p>
+          <p>{{ bakeryInfo()?.contact?.address?.street }} {{ bakeryInfo()?.contact?.address?.number }}</p>
+          <p>{{ bakeryInfo()?.contact?.address?.zip }} {{ bakeryInfo()?.contact?.address?.city }}</p>
+          @if (bakeryInfo()?.contact?.address?.country) {
+            <p>{{ bakeryInfo()?.contact?.address?.country }}</p>
           }
         </address>
       </div>
@@ -29,9 +29,9 @@
       <div class="footer-section">
         <h3 class="footer-title">Volg Ons</h3>
         <div class="social-links">
-          @if (bakeryInfo.socialMedia?.facebook) {
+          @if (bakeryInfo()?.socialMedia?.facebook) {
             <a
-              [href]="bakeryInfo.socialMedia?.facebook!"
+              [href]="bakeryInfo()?.socialMedia?.facebook!"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -42,9 +42,9 @@
               </svg>
             </a>
           }
-          @if (bakeryInfo.socialMedia?.instagram) {
+          @if (bakeryInfo()?.socialMedia?.instagram) {
             <a
-              [href]="bakeryInfo.socialMedia?.instagram!"
+              [href]="bakeryInfo()?.socialMedia?.instagram!"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -61,9 +61,9 @@
 
     <div class="footer-bottom">
       <p class="copyright">
-        © {{ currentYear }} {{ bakeryInfo.name }}. Alle rechten voorbehouden.
-        @if (bakeryInfo.vatNumber) {
-          <span class="vat-number"> | BTW: {{ bakeryInfo.vatNumber }}</span>
+        © {{ currentYear }} {{ bakeryInfo()?.name }}. Alle rechten voorbehouden.
+        @if (bakeryInfo()?.vatNumber) {
+          <span class="vat-number"> | BTW: {{ bakeryInfo()?.vatNumber }}</span>
         }
       </p>
     </div>

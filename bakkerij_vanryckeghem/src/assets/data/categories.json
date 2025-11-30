@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Brood",
+    "description": "Zin in een traditioneel wit, bruin of meergranen brood we hebben het allemaal",
+    "routerLink": "/assortiment",
+    "queryParams": {
+      "category": "Brood"
+    }
+  },
+  {
+    "title": "Gebak",
+    "description": "Zin in een lekker stukje taart we hebben ze in bijna alle vormen en smaken",
+    "routerLink": "/assortiment",
+    "queryParams": {
+      "category": "Gebak"
+    }
+  },
+  {
+    "title": "Ontbijtkoeken",
+    "description": "Zin in een lekkere chocoladekoek, croissant, boterkoek en nog veel meer neem een kijkje in ons assortiment",
+    "routerLink": "/assortiment",
+    "queryParams": {
+      "category": "Ontbijtkoeken"
+    }
+  }
+]

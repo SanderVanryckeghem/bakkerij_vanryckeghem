@@ -14,9 +14,9 @@ import { SeoService } from '../../../core/services/seo.service';
 export class Home implements OnInit {
   private contentService = inject(ContentService);
   private seoService = inject(SeoService);
-  bakeryInfo = this.contentService.getBakeryInfo();
-  categories = this.contentService.getCategories();
-  faqItems = this.contentService.getFAQs();
+  bakeryInfo = this.contentService.bakeryInfo;
+  categories = this.contentService.categories;
+  faqs = this.contentService.faqs;
   openFaqIndex = signal<number | null>(null);
 
   toggleFaq(index: number) {

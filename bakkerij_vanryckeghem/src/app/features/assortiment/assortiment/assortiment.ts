@@ -18,14 +18,14 @@ export class Assortiment implements OnInit {
 
   selectedCategory = signal<CategoryFilter>('Alle');
   categories = CATEGORY_FILTERS;
-  products = this.contentService.getProducts();
+  products = this.contentService.products;
 
   filteredProducts = computed(() => {
     const category = this.selectedCategory();
     if (category === 'Alle') {
-      return this.products;
+      return this.products();
     }
-    return this.products.filter(p => p.category === category);
+    return this.products().filter(p => p.category === category);
   });
 
   ngOnInit() {

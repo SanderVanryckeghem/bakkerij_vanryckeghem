@@ -1,0 +1,6 @@
+# robots.txt for Bakkerij Vanryckeghem
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.bakkerijvanryckeghem.be/sitemap.xml

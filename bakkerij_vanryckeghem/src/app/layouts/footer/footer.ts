@@ -18,7 +18,7 @@ export class Footer {
   private contentService = inject(ContentService);
 
   currentYear = new Date().getFullYear();
-  bakeryInfo = this.contentService.getBakeryInfo();
+  bakeryInfo = this.contentService.bakeryInfo;
 
   compactOpeningHours: CompactHours[] = this.getCompactHours();
 

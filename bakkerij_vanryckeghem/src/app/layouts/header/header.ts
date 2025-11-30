@@ -17,7 +17,7 @@ export class Header {
   private contentService = inject(ContentService);
 
   mobileMenuOpen = signal(false);
-  bakeryInfo = this.contentService.getBakeryInfo();
+  bakeryInfo = this.contentService.bakeryInfo;
 
   navItems: NavItem[] = [
     { label: 'Home', route: '/' },
