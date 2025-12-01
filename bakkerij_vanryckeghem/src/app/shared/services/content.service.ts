@@ -1,43 +1,80 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { catchError, of } from 'rxjs';
 import { Product, BakeryInfo, OpeningHours, FAQItem, Category } from '../models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContentService {
+  private http = inject(HttpClient);
+
   products = signal<Product[]>([]);
   categories = signal<Category[]>([]);
   faqs = signal<FAQItem[]>([]);
   bakeryInfo = signal<BakeryInfo | null>(null);
   openingHours = signal<OpeningHours[]>([]);
 
-  constructor(private http: HttpClient) {
+  loadingError = signal<string | null>(null);
+
+  constructor() {
     this.loadData();
   }
 
   private loadData(): void {
-    this.http.get<Product[]>('/assets/data/products.json').subscribe(data => {
+    this.http.get<Product[]>('/assets/data/products.json').pipe(
+      catchError(error => {
+        console.error('Failed to load products:', error);
+        this.loadingError.set('Er is een probleem bij het laden van de producten.');
+        return of([]);
+      })
+    ).subscribe(data => {
       this.products.set(data);
     });
 
-    this.http.get<Category[]>('/assets/data/categories.json').subscribe(data => {
+    this.http.get<Category[]>('/assets/data/categories.json').pipe(
+      catchError(error => {
+        console.error('Failed to load categories:', error);
+        this.loadingError.set('Er is een probleem bij het laden van de categorieën.');
+        return of([]);
+      })
+    ).subscribe(data => {
       this.categories.set(data);
     });
 
-    this.http.get<FAQItem[]>('/assets/data/faq.json').subscribe(data => {
+    this.http.get<FAQItem[]>('/assets/data/faq.json').pipe(
+      catchError(error => {
+        console.error('Failed to load FAQs:', error);
+        this.loadingError.set('Er is een probleem bij het laden van de veelgestelde vragen.');
+        return of([]);
+      })
+    ).subscribe(data => {
       this.faqs.set(data);
     });
 
-    this.http.get<OpeningHours[]>('/assets/data/opening-hours.json').subscribe(data => {
+    this.http.get<OpeningHours[]>('/assets/data/opening-hours.json').pipe(
+      catchError(error => {
+        console.error('Failed to load opening hours:', error);
+        this.loadingError.set('Er is een probleem bij het laden van de openingsuren.');
+        return of([]);
+      })
+    ).subscribe(data => {
       this.openingHours.set(data);
       this.loadBakeryInfo();
     });
   }
 
   private loadBakeryInfo(): void {
-    this.http.get<BakeryInfo>('/assets/data/bakery-info.json').subscribe(data => {
-      this.bakeryInfo.set({ ...data, openingHours: this.openingHours() });
+    this.http.get<BakeryInfo>('/assets/data/bakery-info.json').pipe(
+      catchError(error => {
+        console.error('Failed to load bakery info:', error);
+        this.loadingError.set('Er is een probleem bij het laden van de bakkerij informatie.');
+        return of(null);
+      })
+    ).subscribe(data => {
+      if (data) {
+        this.bakeryInfo.set({ ...data, openingHours: this.openingHours() });
+      }
     });
   }
 
