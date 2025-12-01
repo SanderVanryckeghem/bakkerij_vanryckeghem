@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { ContentService } from '../../shared/services';
 
 interface CompactHours {
@@ -20,33 +20,39 @@ export class Footer {
   currentYear = new Date().getFullYear();
   bakeryInfo = this.contentService.bakeryInfo;
 
-  compactOpeningHours: CompactHours[] = this.getCompactHours();
+  compactOpeningHours = computed<CompactHours[]>(() => {
+    const hours = this.contentService.openingHours();
+    if (!hours.length) return [];
 
-  private getCompactHours(): CompactHours[] {
     const today = new Date().getDay();
+
+    const monday = hours.find(h => h.day === 'Maandag');
+    const wednesday = hours.find(h => h.day === 'Woensdag');
+    const saturday = hours.find(h => h.day === 'Zaterdag');
+    const sunday = hours.find(h => h.day === 'Zondag');
 
     return [
       {
         days: 'Maandag - Dinsdag',
-        hours: 'Gesloten',
-        isClosed: true,
+        hours: monday?.hours || 'Gesloten',
+        isClosed: monday?.isClosed ?? true,
         isToday: today === 1 || today === 2
       },
       {
         days: 'Woensdag - Vrijdag',
-        hours: '08:30 – 12:30 / 13:45 – 19:00',
+        hours: wednesday?.hours || '',
         isToday: today === 3 || today === 4 || today === 5
       },
       {
         days: 'Zaterdag',
-        hours: '08:15 – 12:30 / 13:45 – 19:00',
+        hours: saturday?.hours || '',
         isToday: today === 6
       },
       {
         days: 'Zondag',
-        hours: '07:15 – 13:00',
+        hours: sunday?.hours || '',
         isToday: today === 0
       }
     ];
-  }
+  });
 }

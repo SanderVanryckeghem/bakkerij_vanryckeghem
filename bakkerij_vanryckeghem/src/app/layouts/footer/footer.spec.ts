@@ -14,11 +14,11 @@ describe('Footer', () => {
   const mockOpeningHours: OpeningHours[] = [
     { day: 'Maandag', hours: 'Gesloten', isClosed: true },
     { day: 'Dinsdag', hours: 'Gesloten', isClosed: true },
-    { day: 'Woensdag', hours: '08:30 - 12:30 / 13:45 - 19:00' },
-    { day: 'Donderdag', hours: '08:30 - 12:30 / 13:45 - 19:00' },
-    { day: 'Vrijdag', hours: '08:30 - 12:30 / 13:45 - 19:00' },
-    { day: 'Zaterdag', hours: '08:15 - 12:30 / 13:45 - 19:00' },
-    { day: 'Zondag', hours: '07:15 - 13:00' }
+    { day: 'Woensdag', hours: '08:30 – 12:30 / 13:45 – 19:00' },
+    { day: 'Donderdag', hours: '08:30 – 12:30 / 13:45 – 19:00' },
+    { day: 'Vrijdag', hours: '08:30 – 12:30 / 13:45 – 19:00' },
+    { day: 'Zaterdag', hours: '08:15 – 12:30 / 13:45 – 19:00' },
+    { day: 'Zondag', hours: '07:15 – 13:00' }
   ];
 
   const mockBakeryInfo: BakeryInfo = {
@@ -75,45 +75,45 @@ describe('Footer', () => {
       expect(component.bakeryInfo()).toEqual(mockBakeryInfo);
     });
 
-    it('should have compact opening hours', () => {
+    it('should have compact opening hours computed signal', () => {
       expect(component.compactOpeningHours).toBeDefined();
-      expect(component.compactOpeningHours.length).toBe(4);
+      expect(component.compactOpeningHours().length).toBe(4);
     });
   });
 
-  describe('getCompactHours', () => {
+  describe('compactOpeningHours computed signal', () => {
     it('should return 4 compact hour entries', () => {
-      expect(component.compactOpeningHours.length).toBe(4);
+      expect(component.compactOpeningHours().length).toBe(4);
     });
 
     it('should have Monday-Tuesday as first entry', () => {
-      const firstEntry = component.compactOpeningHours[0];
+      const firstEntry = component.compactOpeningHours()[0];
       expect(firstEntry.days).toBe('Maandag - Dinsdag');
       expect(firstEntry.hours).toBe('Gesloten');
       expect(firstEntry.isClosed).toBe(true);
     });
 
     it('should have Wednesday-Friday as second entry', () => {
-      const secondEntry = component.compactOpeningHours[1];
+      const secondEntry = component.compactOpeningHours()[1];
       expect(secondEntry.days).toBe('Woensdag - Vrijdag');
       expect(secondEntry.hours).toBe('08:30 – 12:30 / 13:45 – 19:00');
     });
 
     it('should have Saturday as third entry', () => {
-      const thirdEntry = component.compactOpeningHours[2];
+      const thirdEntry = component.compactOpeningHours()[2];
       expect(thirdEntry.days).toBe('Zaterdag');
       expect(thirdEntry.hours).toBe('08:15 – 12:30 / 13:45 – 19:00');
     });
 
     it('should have Sunday as fourth entry', () => {
-      const fourthEntry = component.compactOpeningHours[3];
+      const fourthEntry = component.compactOpeningHours()[3];
       expect(fourthEntry.days).toBe('Zondag');
       expect(fourthEntry.hours).toBe('07:15 – 13:00');
     });
 
     it('should mark Monday or Tuesday as today when applicable', () => {
       const today = new Date().getDay();
-      const mondayTuesdayEntry = component.compactOpeningHours[0];
+      const mondayTuesdayEntry = component.compactOpeningHours()[0];
       if (today === 1 || today === 2) {
         expect(mondayTuesdayEntry.isToday).toBe(true);
       } else {
@@ -123,7 +123,7 @@ describe('Footer', () => {
 
     it('should mark Wednesday-Friday as today when applicable', () => {
       const today = new Date().getDay();
-      const wedFriEntry = component.compactOpeningHours[1];
+      const wedFriEntry = component.compactOpeningHours()[1];
       if (today === 3 || today === 4 || today === 5) {
         expect(wedFriEntry.isToday).toBe(true);
       } else {
@@ -133,7 +133,7 @@ describe('Footer', () => {
 
     it('should mark Saturday as today when applicable', () => {
       const today = new Date().getDay();
-      const saturdayEntry = component.compactOpeningHours[2];
+      const saturdayEntry = component.compactOpeningHours()[2];
       if (today === 6) {
         expect(saturdayEntry.isToday).toBe(true);
       } else {
@@ -143,12 +143,18 @@ describe('Footer', () => {
 
     it('should mark Sunday as today when applicable', () => {
       const today = new Date().getDay();
-      const sundayEntry = component.compactOpeningHours[3];
+      const sundayEntry = component.compactOpeningHours()[3];
       if (today === 0) {
         expect(sundayEntry.isToday).toBe(true);
       } else {
         expect(sundayEntry.isToday).toBe(false);
       }
+    });
+
+    it('should return empty array when no opening hours available', () => {
+      contentService.openingHours.set([]);
+      fixture.detectChanges();
+      expect(component.compactOpeningHours().length).toBe(0);
     });
   });
 
@@ -189,6 +195,18 @@ describe('Footer', () => {
       fixture.detectChanges();
       expect(component.bakeryInfo()).toEqual(newBakeryInfo);
     });
+
+    it('should update compact opening hours when opening hours signal changes', () => {
+      const newHours: OpeningHours[] = [
+        { day: 'Maandag', hours: '09:00 – 17:00' },
+        { day: 'Woensdag', hours: '10:00 – 18:00' },
+        { day: 'Zaterdag', hours: '08:00 – 14:00' },
+        { day: 'Zondag', hours: '08:00 – 12:00' }
+      ];
+      contentService.openingHours.set(newHours);
+      fixture.detectChanges();
+      expect(component.compactOpeningHours()[0].hours).toBe('09:00 – 17:00');
+    });
   });
 
   describe('Service injection', () => {
@@ -204,7 +222,7 @@ describe('Footer', () => {
 
   describe('CompactHours interface', () => {
     it('should have correct structure for each compact hour entry', () => {
-      component.compactOpeningHours.forEach(entry => {
+      component.compactOpeningHours().forEach(entry => {
         expect(entry.days).toBeDefined();
         expect(entry.hours).toBeDefined();
         expect(typeof entry.days).toBe('string');
@@ -213,7 +231,7 @@ describe('Footer', () => {
     });
 
     it('should mark closed entries correctly', () => {
-      const closedEntry = component.compactOpeningHours.find(entry => entry.isClosed);
+      const closedEntry = component.compactOpeningHours().find(entry => entry.isClosed);
       expect(closedEntry).toBeDefined();
       expect(closedEntry?.hours).toBe('Gesloten');
     });
