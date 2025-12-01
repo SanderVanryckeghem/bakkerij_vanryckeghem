@@ -41,7 +41,7 @@
           <div class="team-card">
             <div class="team-card-image">
               @if (member.imageUrl) {
-                <img [src]="member.imageUrl" [alt]="member.name" loading="lazy">
+                <img [src]="member.imageUrl | assetUrl" [alt]="member.name" loading="lazy">
               } @else {
                 <div class="team-card-placeholder">
                   <svg class="w-20 h-20 text-bakery-brown-light" fill="currentColor" viewBox="0 0 24 24">
