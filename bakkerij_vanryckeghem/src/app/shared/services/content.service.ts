@@ -2,12 +2,14 @@ import { Injectable, signal, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, of } from 'rxjs';
 import { Product, BakeryInfo, OpeningHours, FAQItem, Category, PopupConfig } from '../models';
+import { ImagePreloadService } from './image-preload.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContentService {
   private http = inject(HttpClient);
+  private imagePreloadService = inject(ImagePreloadService);
 
   products = signal<Product[]>([]);
   categories = signal<Category[]>([]);
@@ -31,6 +33,7 @@ export class ContentService {
       })
     ).subscribe(data => {
       this.products.set(data);
+      this.preloadProductImages(data);
     });
 
     this.http.get<Category[]>('assets/data/categories.json').pipe(
@@ -118,5 +121,12 @@ export class ContentService {
 
   getPopupConfig(): PopupConfig | null {
     return this.popupConfig();
+  }
+
+  private preloadProductImages(products: Product[]): void {
+    const imagePaths = products
+      .map(p => p.imageUrl)
+      .filter((url): url is string => !!url);
+    this.imagePreloadService.preloadImages(imagePaths);
   }
 }
