@@ -45,11 +45,11 @@ describe('ContentService', () => {
   };
 
   function flushAllRequests() {
-    httpMock.expectOne('/assets/data/products.json').flush(mockProducts);
-    httpMock.expectOne('/assets/data/categories.json').flush(mockCategories);
-    httpMock.expectOne('/assets/data/faq.json').flush(mockFaqs);
-    httpMock.expectOne('/assets/data/opening-hours.json').flush(mockOpeningHours);
-    httpMock.expectOne('/assets/data/bakery-info.json').flush(mockBakeryInfo);
+    httpMock.expectOne('assets/data/products.json').flush(mockProducts);
+    httpMock.expectOne('assets/data/categories.json').flush(mockCategories);
+    httpMock.expectOne('assets/data/faq.json').flush(mockFaqs);
+    httpMock.expectOne('assets/data/opening-hours.json').flush(mockOpeningHours);
+    httpMock.expectOne('assets/data/bakery-info.json').flush(mockBakeryInfo);
   }
 
   beforeEach(() => {
@@ -72,10 +72,10 @@ describe('ContentService', () => {
 
   describe('Service initialization', () => {
     it('should load data on initialization', () => {
-      const productsReq = httpMock.expectOne('/assets/data/products.json');
-      const categoriesReq = httpMock.expectOne('/assets/data/categories.json');
-      const faqsReq = httpMock.expectOne('/assets/data/faq.json');
-      const openingHoursReq = httpMock.expectOne('/assets/data/opening-hours.json');
+      const productsReq = httpMock.expectOne('assets/data/products.json');
+      const categoriesReq = httpMock.expectOne('assets/data/categories.json');
+      const faqsReq = httpMock.expectOne('assets/data/faq.json');
+      const openingHoursReq = httpMock.expectOne('assets/data/opening-hours.json');
 
       expect(productsReq.request.method).toBe('GET');
       expect(categoriesReq.request.method).toBe('GET');
@@ -87,7 +87,7 @@ describe('ContentService', () => {
       faqsReq.flush(mockFaqs);
       openingHoursReq.flush(mockOpeningHours);
 
-      const bakeryInfoReq = httpMock.expectOne('/assets/data/bakery-info.json');
+      const bakeryInfoReq = httpMock.expectOne('assets/data/bakery-info.json');
       expect(bakeryInfoReq.request.method).toBe('GET');
       bakeryInfoReq.flush(mockBakeryInfo);
     });

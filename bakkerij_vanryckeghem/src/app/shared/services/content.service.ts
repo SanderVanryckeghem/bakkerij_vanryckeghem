@@ -22,7 +22,7 @@ export class ContentService {
   }
 
   private loadData(): void {
-    this.http.get<Product[]>('/assets/data/products.json').pipe(
+    this.http.get<Product[]>('assets/data/products.json').pipe(
       catchError(error => {
         console.error('Failed to load products:', error);
         this.loadingError.set('Er is een probleem bij het laden van de producten.');
@@ -32,7 +32,7 @@ export class ContentService {
       this.products.set(data);
     });
 
-    this.http.get<Category[]>('/assets/data/categories.json').pipe(
+    this.http.get<Category[]>('assets/data/categories.json').pipe(
       catchError(error => {
         console.error('Failed to load categories:', error);
         this.loadingError.set('Er is een probleem bij het laden van de categorieën.');
@@ -42,7 +42,7 @@ export class ContentService {
       this.categories.set(data);
     });
 
-    this.http.get<FAQItem[]>('/assets/data/faq.json').pipe(
+    this.http.get<FAQItem[]>('assets/data/faq.json').pipe(
       catchError(error => {
         console.error('Failed to load FAQs:', error);
         this.loadingError.set('Er is een probleem bij het laden van de veelgestelde vragen.');
@@ -52,7 +52,7 @@ export class ContentService {
       this.faqs.set(data);
     });
 
-    this.http.get<OpeningHours[]>('/assets/data/opening-hours.json').pipe(
+    this.http.get<OpeningHours[]>('assets/data/opening-hours.json').pipe(
       catchError(error => {
         console.error('Failed to load opening hours:', error);
         this.loadingError.set('Er is een probleem bij het laden van de openingsuren.');
@@ -65,7 +65,7 @@ export class ContentService {
   }
 
   private loadBakeryInfo(): void {
-    this.http.get<BakeryInfo>('/assets/data/bakery-info.json').pipe(
+    this.http.get<BakeryInfo>('assets/data/bakery-info.json').pipe(
       catchError(error => {
         console.error('Failed to load bakery info:', error);
         this.loadingError.set('Er is een probleem bij het laden van de bakkerij informatie.');
