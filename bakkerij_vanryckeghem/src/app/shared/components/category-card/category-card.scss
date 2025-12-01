@@ -53,16 +53,23 @@
 .category-card-body {
   padding: 1.5rem;
   flex: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .category-card-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: $bakery-brown;
   margin-bottom: 0.75rem;
   font-family: Georgia, Palatino, 'Times New Roman', serif;
+}
+
+.category-card-icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
 }
 
 .category-card-description {
