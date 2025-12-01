@@ -1,7 +1,7 @@
 import { Injectable, signal, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, of } from 'rxjs';
-import { Product, BakeryInfo, OpeningHours, FAQItem, Category } from '../models';
+import { Product, BakeryInfo, OpeningHours, FAQItem, Category, PopupConfig } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,7 @@ export class ContentService {
   faqs = signal<FAQItem[]>([]);
   bakeryInfo = signal<BakeryInfo | null>(null);
   openingHours = signal<OpeningHours[]>([]);
+  popupConfig = signal<PopupConfig | null>(null);
 
   loadingError = signal<string | null>(null);
 
@@ -62,6 +63,15 @@ export class ContentService {
       this.openingHours.set(data);
       this.loadBakeryInfo();
     });
+
+    this.http.get<PopupConfig>('assets/data/popup.json').pipe(
+      catchError(error => {
+        console.error('Failed to load popup config:', error);
+        return of(null);
+      })
+    ).subscribe(data => {
+      this.popupConfig.set(data);
+    });
   }
 
   private loadBakeryInfo(): void {
@@ -104,5 +114,9 @@ export class ContentService {
 
   getCategories(): Category[] {
     return this.categories();
+  }
+
+  getPopupConfig(): PopupConfig | null {
+    return this.popupConfig();
   }
 }

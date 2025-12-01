@@ -1,3 +1,12 @@
+@if (showPopup() && popupConfig()) {
+  <app-popup
+    [title]="popupConfig()!.title"
+    [message]="popupConfig()!.message"
+    [buttonText]="popupConfig()!.buttonText"
+    (closed)="closePopup()"
+  ></app-popup>
+}
+
 <div class="container-custom py-8">
   <app-hero
     title="Elke ochtend vers gebakken, met liefde en vakmanschap."

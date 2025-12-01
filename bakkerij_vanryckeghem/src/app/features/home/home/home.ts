@@ -1,13 +1,14 @@
-import { Component, inject, signal, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, signal, OnInit, ChangeDetectionStrategy, effect } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Hero } from '../../../shared/components/hero/hero';
 import { CategoryCard } from '../../../shared/components/category-card/category-card';
+import { Popup } from '../../../shared/components/popup/popup';
 import { ContentService } from '../../../shared/services';
 import { SeoService } from '../../../core/services/seo.service';
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, CategoryCard, RouterLink],
+  imports: [Hero, CategoryCard, RouterLink, Popup],
   templateUrl: './home.html',
   styleUrl: './home.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,7 +19,22 @@ export class Home implements OnInit {
   bakeryInfo = this.contentService.bakeryInfo;
   categories = this.contentService.categories;
   faqs = this.contentService.faqs;
+  popupConfig = this.contentService.popupConfig;
   openFaqIndex = signal<number | null>(null);
+  showPopup = signal<boolean>(false);
+
+  constructor() {
+    effect(() => {
+      const config = this.popupConfig();
+      if (config?.show) {
+        this.showPopup.set(true);
+      }
+    });
+  }
+
+  closePopup(): void {
+    this.showPopup.set(false);
+  }
 
   toggleFaq(index: number) {
     if (this.openFaqIndex() === index) {

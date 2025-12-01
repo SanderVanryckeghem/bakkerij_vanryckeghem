@@ -4,7 +4,7 @@ import { ContentService } from '../../../shared/services';
 import { SeoService } from '../../../core/services/seo.service';
 import { provideRouter } from '@angular/router';
 import { signal } from '@angular/core';
-import { BakeryInfo, FAQItem, Category } from '../../../shared/models';
+import { BakeryInfo, FAQItem, Category, PopupConfig } from '../../../shared/models';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 
@@ -46,7 +46,8 @@ describe('Home', () => {
       categories: signal<Category[]>(mockCategories),
       faqs: signal<FAQItem[]>(mockFaqs),
       products: signal([]),
-      openingHours: signal([])
+      openingHours: signal([]),
+      popupConfig: signal<PopupConfig | null>(null)
     });
 
     const seoServiceSpy = jasmine.createSpyObj('SeoService', ['updateMetaTags', 'addStructuredData']);

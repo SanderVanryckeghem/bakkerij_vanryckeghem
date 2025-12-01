@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { ContentService } from './content.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { Product, BakeryInfo, OpeningHours, FAQItem, Category } from '../models';
+import { Product, BakeryInfo, OpeningHours, FAQItem, Category, PopupConfig } from '../models';
 
 describe('ContentService', () => {
   let service: ContentService;
@@ -44,11 +44,19 @@ describe('ContentService', () => {
     openingHours: []
   };
 
+  const mockPopupConfig: PopupConfig = {
+    show: false,
+    title: 'Welkom!',
+    message: 'Test message',
+    buttonText: 'Sluiten'
+  };
+
   function flushAllRequests() {
     httpMock.expectOne('assets/data/products.json').flush(mockProducts);
     httpMock.expectOne('assets/data/categories.json').flush(mockCategories);
     httpMock.expectOne('assets/data/faq.json').flush(mockFaqs);
     httpMock.expectOne('assets/data/opening-hours.json').flush(mockOpeningHours);
+    httpMock.expectOne('assets/data/popup.json').flush(mockPopupConfig);
     httpMock.expectOne('assets/data/bakery-info.json').flush(mockBakeryInfo);
   }
 
@@ -76,16 +84,19 @@ describe('ContentService', () => {
       const categoriesReq = httpMock.expectOne('assets/data/categories.json');
       const faqsReq = httpMock.expectOne('assets/data/faq.json');
       const openingHoursReq = httpMock.expectOne('assets/data/opening-hours.json');
+      const popupReq = httpMock.expectOne('assets/data/popup.json');
 
       expect(productsReq.request.method).toBe('GET');
       expect(categoriesReq.request.method).toBe('GET');
       expect(faqsReq.request.method).toBe('GET');
       expect(openingHoursReq.request.method).toBe('GET');
+      expect(popupReq.request.method).toBe('GET');
 
       productsReq.flush(mockProducts);
       categoriesReq.flush(mockCategories);
       faqsReq.flush(mockFaqs);
       openingHoursReq.flush(mockOpeningHours);
+      popupReq.flush(mockPopupConfig);
 
       const bakeryInfoReq = httpMock.expectOne('assets/data/bakery-info.json');
       expect(bakeryInfoReq.request.method).toBe('GET');
