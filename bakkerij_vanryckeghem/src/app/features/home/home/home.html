@@ -37,17 +37,24 @@
   </section>
 
   <section class="mb-16 bg-white rounded-card p-8 md:p-12">
-    <h2 class="text-section text-bakery-brown mb-6">Over {{ bakeryInfo()?.name }}</h2>
-    <div class="prose prose-lg max-w-none">
-      <p class="text-bakery-brown-light leading-relaxed mb-4">
-        {{ bakeryInfo()?.description }}
-      </p>
-      <p class="text-bakery-brown-light leading-relaxed mb-6">
-        Kom langs en proef het verschil.
-      </p>
-      <a routerLink="/over-ons" class="about-button">
-        Lees ons verhaal
-      </a>
+    <div class="about-section-content">
+      <div class="about-text">
+        <h2 class="text-section text-bakery-brown mb-6">Over {{ bakeryInfo()?.name }}</h2>
+        <div class="prose prose-lg max-w-none">
+          <p class="text-bakery-brown-light leading-relaxed mb-4">
+            {{ bakeryInfo()?.description }}
+          </p>
+          <p class="text-bakery-brown-light leading-relaxed mb-6">
+            Kom langs en proef het verschil.
+          </p>
+          <a routerLink="/over-ons" class="about-button">
+            Lees ons verhaal
+          </a>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="images/bakery/winkel_zwart_wit.png" alt="Bakkerij Vanryckeghem winkel" />
+      </div>
     </div>
   </section>
 
