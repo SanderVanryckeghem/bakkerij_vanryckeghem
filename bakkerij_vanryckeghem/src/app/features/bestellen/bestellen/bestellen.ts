@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Hero } from '../../../shared/components';
 import { SeoService } from '../../../core/services/seo.service';
 
@@ -16,6 +16,7 @@ interface OrderingMethod {
   imports: [Hero],
   templateUrl: './bestellen.html',
   styleUrl: './bestellen.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Bestellen implements OnInit {
   private seoService = inject(SeoService);

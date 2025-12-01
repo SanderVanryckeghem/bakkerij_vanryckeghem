@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -6,6 +6,7 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   templateUrl: './category-card.html',
   styleUrl: './category-card.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CategoryCard {
   title = input.required<string>();

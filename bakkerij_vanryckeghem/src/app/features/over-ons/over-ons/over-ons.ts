@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, OnInit, inject } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Hero } from '../../../shared/components';
 import { SeoService } from '../../../core/services/seo.service';
 
@@ -26,6 +26,7 @@ interface PhilosophyValue {
   imports: [Hero],
   templateUrl: './over-ons.html',
   styleUrl: './over-ons.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OverOns implements OnInit, AfterViewInit {
   private seoService = inject(SeoService);

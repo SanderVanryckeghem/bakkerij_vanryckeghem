@@ -1,4 +1,4 @@
-import { Component, signal, computed, inject, OnInit } from '@angular/core';
+import { Component, signal, computed, inject, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Hero } from '../../../shared/components';
 import { ContentService } from '../../../shared/services';
@@ -10,6 +10,7 @@ import { SeoService } from '../../../core/services/seo.service';
   imports: [Hero],
   templateUrl: './assortiment.html',
   styleUrl: './assortiment.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Assortiment implements OnInit {
   private contentService = inject(ContentService);

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -6,6 +6,7 @@ import { NgClass } from '@angular/common';
   imports: [NgClass],
   templateUrl: './card.html',
   styleUrl: './card.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Card {
   hoverable = input<boolean>(true);

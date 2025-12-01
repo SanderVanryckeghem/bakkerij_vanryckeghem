@@ -1,4 +1,4 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, ChangeDetectionStrategy } from '@angular/core';
 import { ContentService } from '../../shared/services';
 
 interface CompactHours {
@@ -13,6 +13,7 @@ interface CompactHours {
   imports: [],
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Footer {
   private contentService = inject(ContentService);

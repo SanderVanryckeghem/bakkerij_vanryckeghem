@@ -1,4 +1,4 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
+import { Component, inject, signal, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Hero } from '../../../shared/components/hero/hero';
 import { CategoryCard } from '../../../shared/components/category-card/category-card';
@@ -10,6 +10,7 @@ import { SeoService } from '../../../core/services/seo.service';
   imports: [Hero, CategoryCard, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home implements OnInit {
   private contentService = inject(ContentService);

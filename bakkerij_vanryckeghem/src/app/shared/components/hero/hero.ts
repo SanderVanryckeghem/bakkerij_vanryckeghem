@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Button } from '../button/button';
 
@@ -7,6 +7,7 @@ import { Button } from '../button/button';
   imports: [RouterLink, Button],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Hero {
   title = input.required<string>();

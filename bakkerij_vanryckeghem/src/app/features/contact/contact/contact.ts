@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, computed } from '@angular/core';
+import { Component, inject, OnInit, computed, ChangeDetectionStrategy } from '@angular/core';
 import { Hero } from '../../../shared/components';
 import { ContentService } from '../../../shared/services';
 import { SeoService } from '../../../core/services/seo.service';
@@ -8,6 +8,7 @@ import { SeoService } from '../../../core/services/seo.service';
   imports: [Hero],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Contact implements OnInit {
   private contentService = inject(ContentService);
