@@ -1,5 +1,7 @@
-import { Component, inject, effect, ChangeDetectionStrategy } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, effect, ChangeDetectionStrategy, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Router, RouterOutlet, NavigationStart, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { Header } from './layouts/header/header';
 import { Footer } from './layouts/footer/footer';
 import { SeoService } from './core/services/seo.service';
@@ -15,6 +17,18 @@ import { ContentService } from './shared/services';
 export class App {
   private seoService = inject(SeoService);
   private contentService = inject(ContentService);
+  private router = inject(Router);
+  private platformId = inject(PLATFORM_ID);
+
+  constructor() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.router.events
+        .pipe(filter((event) => event instanceof NavigationStart || event instanceof NavigationEnd))
+        .subscribe(() => {
+          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        });
+    }
+  }
 
   private structuredDataEffect = effect(() => {
     const bakeryInfo = this.contentService.bakeryInfo();
