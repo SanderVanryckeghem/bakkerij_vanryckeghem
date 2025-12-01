@@ -30,8 +30,8 @@ interface PhilosophyValue {
 })
 export class OverOns implements OnInit, AfterViewInit {
   private seoService = inject(SeoService);
+  private elementRef = inject(ElementRef);
 
-  constructor(private elementRef: ElementRef) {}
   philosophy: PhilosophyValue[] = [
     {
       title: 'Ambachtelijk',
