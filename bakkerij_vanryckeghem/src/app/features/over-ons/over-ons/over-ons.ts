@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, ElementRef, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Hero } from '../../../shared/components';
 import { SeoService } from '../../../core/services/seo.service';
+import { AssetUrlPipe } from '../../../shared/pipes/asset-url.pipe';
 
 interface TimelineEvent {
   year: string;
@@ -23,7 +24,7 @@ interface PhilosophyValue {
 
 @Component({
   selector: 'app-over-ons',
-  imports: [Hero],
+  imports: [Hero, AssetUrlPipe],
   templateUrl: './over-ons.html',
   styleUrl: './over-ons.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

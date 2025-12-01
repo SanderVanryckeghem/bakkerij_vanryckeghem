@@ -36,8 +36,16 @@
     (function(){
       var redirect = sessionStorage.redirect;
       delete sessionStorage.redirect;
-      if (redirect && redirect !== location.href) {
-        history.replaceState(null, null, redirect);
+      if (redirect) {
+        // Remove the repo name prefix if present and restore the route
+        var base = '/bakkerij_vanryckeghem';
+        var path = redirect;
+        if (path.indexOf('bakkerij_vanryckeghem/') === 0) {
+          path = '/' + path.slice('bakkerij_vanryckeghem/'.length);
+        }
+        if (path && path !== '/' && path !== window.location.pathname) {
+          history.replaceState(null, null, base + path);
+        }
       }
     })();
   </script>

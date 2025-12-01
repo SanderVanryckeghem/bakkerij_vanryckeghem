@@ -4,10 +4,11 @@ import { Hero } from '../../../shared/components';
 import { ContentService } from '../../../shared/services';
 import { CategoryFilter, CATEGORY_FILTERS } from '../../../shared/constants/categories';
 import { SeoService } from '../../../core/services/seo.service';
+import { AssetUrlPipe } from '../../../shared/pipes/asset-url.pipe';
 
 @Component({
   selector: 'app-assortiment',
-  imports: [Hero],
+  imports: [Hero, AssetUrlPipe],
   templateUrl: './assortiment.html',
   styleUrl: './assortiment.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
