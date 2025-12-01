@@ -60,13 +60,13 @@ export class OverOns implements OnInit, AfterViewInit {
       name: 'Olivier Vanryckeghem',
       role: 'Bakker',
       description: 'Olivier tovert dagelijks de mooiste taarten en gebakjes. zijn creativiteit en oog voor detail maken elk stuk uniek.',
-      imageUrl: '/images/team/olivier_cartoon.png'
+      imageUrl: 'images/team/olivier_cartoon.png'
     },
     {
       name: 'Tamara Mahieu',
       role: 'Winkelverantwoordelijke',
       description: 'Tamara zorgt ervoor dat onze klanten zich altijd welkom voelen en helpt hen met een glimlach aan de perfecte keuze.',
-      imageUrl: '/images/team/tamara_cartoon.png'
+      imageUrl: 'images/team/tamara_cartoon.png'
     }
   ];
 

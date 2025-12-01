@@ -114,7 +114,7 @@ describe('OverOns', () => {
     it('should have image URL for each team member', () => {
       component.team.forEach(member => {
         expect(member.imageUrl).toBeDefined();
-        expect(member.imageUrl).toContain('/images/team/');
+        expect(member.imageUrl).toContain('images/team/');
       });
     });
   });
