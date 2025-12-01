@@ -15,5 +15,10 @@
   },
   "socialMedia": {
     "facebook": "https://www.facebook.com/profile.php?id=100063177612572"
+  },
+  "googleReview": {
+    "rating": 4.7,
+    "reviewCount": 50,
+    "url": "https://www.google.com/search?sca_esv=bb8d476e17d32f17&rlz=1C5CHFA_enBE1124BE1124&sxsrf=AE3TifPlU0WClP41KrgEHEJ2MAbWGdDgug:1764602076656&q=bakkerij+vanryckeghem&si=AMgyJEuzsz2NflaaWzrzdpjxXXRaJ2hfdMsbe_mSWso6src8s6Gcr4sz9yWgGEHf61Ueqp-Mvvl--lZ03XQ0m_5nrpvXknieN8il4ZwymjlE_l8V078nLTA%3D&uds=AOm0WdFBvY2LKXs9H9KYsBlzmzqjlFuX642CAPwnX8lwR-ytBDCuujugcgHVAcqQsT6bfA81p0GcKw275okBk__jpI1YnMCauAvjAkgik2f8Q3ionDVEoq_gMipwOf-F6gpp1zHhQ8vS&sa=X&sqi=2&ved=2ahUKEwiAy8v_1pyRAxV5UqQEHXwMBsMQ3PALegQILRAF&biw=1512&bih=827&dpr=2"
   }
 }

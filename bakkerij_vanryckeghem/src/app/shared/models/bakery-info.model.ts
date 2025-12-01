@@ -20,6 +20,12 @@ export interface SocialMedia {
   twitter?: string;
 }
 
+export interface GoogleReview {
+  rating: number;
+  reviewCount: number;
+  url: string;
+}
+
 export interface BakeryInfo {
   name: string;
   description: string;
@@ -27,4 +33,5 @@ export interface BakeryInfo {
   contact: ContactInfo;
   openingHours: OpeningHours[];
   socialMedia?: SocialMedia;
+  googleReview?: GoogleReview;
 }

@@ -56,6 +56,25 @@
             </a>
           }
         </div>
+        @if (bakeryInfo()?.googleReview) {
+          <a
+            [href]="bakeryInfo()?.googleReview?.url!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="google-review"
+          >
+            <div class="google-review-stars">
+              @for (star of [1,2,3,4,5]; track star) {
+                <svg class="star-icon" [class.filled]="star <= (bakeryInfo()?.googleReview?.rating ?? 0)" viewBox="0 0 24 24">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+              }
+            </div>
+            <span class="google-review-text">
+              {{ bakeryInfo()?.googleReview?.rating }} / 5 ({{ bakeryInfo()?.googleReview?.reviewCount }} reviews)
+            </span>
+          </a>
+        }
       </div>
     </div>
 
