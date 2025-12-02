@@ -165,7 +165,7 @@
     "description": "Krokante appelflap gevuld met verse appel",
     "category": "Gebak",
     "isAvailable": true,
-    "imageUrl": "images/product/pastries/appelflap.png"
+    "imageUrl": "images/product/cake/appelflap.png"
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@
     "description": "Zoete koek gevuld met huisgemaakte confituur",
     "category": "Gebak",
     "isAvailable": true,
-    "imageUrl": "images/product/pastries/confituur.png"
+    "imageUrl": "images/product/cake/confituur.png"
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "description": "Licht gebakje in de vorm van een maantje",
     "category": "Gebak",
     "isAvailable": true,
-    "imageUrl": "images/product/pastries/maantje.png"
+    "imageUrl": "images/product/cake/maantje.png"
   },
   {
     "id": 24,
