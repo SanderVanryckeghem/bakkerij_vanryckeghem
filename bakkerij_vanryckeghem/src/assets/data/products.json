@@ -170,7 +170,7 @@
   {
     "id": 22,
     "name": "Confituurkoek",
-    "description": "Zoete koek gevuld met huisgemaakte confituur",
+    "description": "Zoete koek gevuld met confituur",
     "category": "Gebak",
     "isAvailable": true,
     "imageUrl": "images/product/cake/confituur.png"
