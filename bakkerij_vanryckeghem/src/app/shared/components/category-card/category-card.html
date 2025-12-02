@@ -10,7 +10,7 @@
         <div class="category-card-body">
           <h3 class="category-card-title">
             @if (icon()) {
-              <img class="category-card-icon" [src]="icon()! | assetUrl" [alt]="title()" />
+              <img class="category-card-icon" [src]="icon()! | assetUrl" [alt]="title()" width="32" height="32" />
             }
             {{ title() }}
           </h3>
@@ -28,7 +28,7 @@
       <div class="category-card-body">
         <h3 class="category-card-title">
           @if (icon()) {
-            <img class="category-card-icon" [src]="icon()! | assetUrl" [alt]="title()" />
+            <img class="category-card-icon" [src]="icon()! | assetUrl" [alt]="title()" width="32" height="32" />
           }
           {{ title() }}
         </h3>
