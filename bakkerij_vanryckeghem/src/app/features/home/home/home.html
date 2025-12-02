@@ -2,7 +2,7 @@
   <app-popup
     [title]="popupConfig()!.title"
     [message]="popupConfig()!.message"
-    [buttonText]="popupConfig()!.buttonText"
+    [buttonText]="popupConfig()!.buttonText ?? 'Sluiten'"
     (closed)="closePopup()"
   ></app-popup>
 }

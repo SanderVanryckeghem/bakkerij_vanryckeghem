@@ -1,5 +1,7 @@
 {
-  "show": false,
+  "show": true,
   "title": "Openingsuren eindejaar",
-  "message": "Maandag: gesloten \n Dinsdag: gesloten \n Woensdag: 8u 30 - 16u (Kerstavond, Oudejaar) \n Donderdag: 9u - 13u (Kerstdag, Nieuwjaar) \n Vrijdag: gesloten \n Zaterdag: 8u - 12u 30 / 13u 45 - 19u \n Zondag: 7u 15 - 13u \n"
+  "message": "Maandag: gesloten \n Dinsdag: gesloten \n Woensdag: 8u 30 - 16u (Kerstavond, Oudejaar) \n Donderdag: 9u - 13u (Kerstdag, Nieuwjaar) \n Vrijdag: gesloten \n Zaterdag: 8u - 12u 30 / 13u 45 - 19u \n Zondag: 7u 15 - 13u \n",
+  "startDate": "2025-11-15T00:00:00",
+  "endDate": "2026-01-05T23:59:59"
 }

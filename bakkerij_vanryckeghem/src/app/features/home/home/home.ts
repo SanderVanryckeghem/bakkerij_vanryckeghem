@@ -26,10 +26,24 @@ export class Home implements OnInit {
   constructor() {
     effect(() => {
       const config = this.popupConfig();
-      if (config?.show) {
+      if (config?.show && this.isWithinSchedule(config.startDate, config.endDate)) {
         this.showPopup.set(true);
       }
     });
+  }
+
+  private isWithinSchedule(startDate?: string, endDate?: string): boolean {
+    const now = new Date();
+
+    if (startDate && new Date(startDate) > now) {
+      return false;
+    }
+
+    if (endDate && new Date(endDate) < now) {
+      return false;
+    }
+
+    return true;
   }
 
   closePopup(): void {
