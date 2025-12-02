@@ -50,7 +50,7 @@ export class Home implements OnInit {
 
   ngOnInit() {
     this.seoService.updateMetaTags({
-      title: 'Bakkerij Vanryckeghem - Ambachtelijk Brood & Gebak in Harelbeke',
+      title: 'Bakkerij Vanryckeghem - Brood & Gebak Harelbeke',
       description: 'Dagvers ambachtelijk brood, gebak en ontbijtkoeken uit Harelbeke. Familietraditie sinds de jaren \'40. Bezoek ons in de Overleiestraat 38.',
       keywords: 'bakkerij Harelbeke, ambachtelijk brood, vers gebak, ontbijtkoeken, taarten op bestelling',
       url: 'https://www.bakkerijvanryckeghem.be'
