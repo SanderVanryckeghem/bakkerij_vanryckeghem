@@ -1,22 +1,18 @@
 [
   {
     "question": "Hoe lang op voorhand moet ik bestellen?",
-    "answer": "Voor dagelijkse producten zoals brood raden we aan om minstens een dag op voorhand te bestellen. Voor speciale bestellingen zoals taarten of grote hoeveelheden vragen we om minimaal 48 uur op voorhand contact met ons op te nemen."
+    "answer": "Voor dagelijkse producten zoals brood raden we aan om minstens een dag op voorhand te bestellen. Voor speciale bestellingen of grote hoeveelheden vragen we om minimaal een week op voorhand contact met ons op te nemen."
   },
   {
     "question": "Kan ik mijn bestelling nog wijzigen?",
-    "answer": "U kunt uw bestelling wijzigen tot 24 uur voor het afhaaltijdstip. Neem hiervoor contact met ons op via telefoon of kom langs in de winkel. We helpen u graag verder."
+    "answer": "U kunt de meeste bestelling wijzigen tot 24 uur voor het afhaaltijdstip. Neem hiervoor contact met ons op via telefoon of kom langs in de winkel. We helpen u graag verder."
   },
   {
     "question": "Wat zijn de afhaal tijden?",
-    "answer": "U kunt uw bestelling afhalen tijdens onze openingsuren: Dinsdag t/m vrijdag van 07:00 - 18:00, zaterdag van 07:00 - 16:00 en zondag van 07:00 - 13:00. Op maandag zijn we gesloten."
+    "answer": "Bij het plaatsen van uw bestelling wordt er een tijdstip meegegeven."
   },
   {
-    "question": "Kan ik ook glutenvrije producten bestellen?",
-    "answer": "Ja, we hebben een selectie glutenvrije producten beschikbaar. Gelieve dit wel op voorhand door te geven bij uw bestelling, zodat we de beschikbaarheid kunnen garanderen."
-  },
-  {
-    "question": "Is er een minimum bestelbedrag?",
-    "answer": "Nee, er is geen minimum bestelbedrag. U kunt bij ons al een enkel broodje bestellen. Voor grote bestellingen bieden we graag een aangepaste service."
+    "question": "Afhalen van bestellingen op zondag?",
+    "answer": "Heeft u uw bestelling vooraf betaald? Dan kan u deze op zondag eenvoudig afhalen aan de zijdeur. Moet u nog betalen? Dan bent u welkom in de winkel om uw bestelling af te halen."
   }
 ]

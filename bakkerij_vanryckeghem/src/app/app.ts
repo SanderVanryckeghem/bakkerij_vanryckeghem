@@ -36,14 +36,13 @@ export class App {
 
     const openingHours = this.contentService.openingHours();
 
-    const structuredData = {
+    const structuredData: Record<string, unknown> = {
       '@context': 'https://schema.org',
       '@type': 'Bakery',
       'name': bakeryInfo.name,
       'description': bakeryInfo.description,
       'url': 'https://www.bakkerijvanryckeghem.be',
       'telephone': bakeryInfo.contact.phone,
-      'email': bakeryInfo.contact.email,
       'address': {
         '@type': 'PostalAddress',
         'streetAddress': `${bakeryInfo.contact.address.street} ${bakeryInfo.contact.address.number}`,
@@ -69,6 +68,10 @@ export class App {
         bakeryInfo.socialMedia.facebook
       ] : []
     };
+
+    if (bakeryInfo.contact.email) {
+      structuredData['email'] = bakeryInfo.contact.email;
+    }
 
     this.seoService.addStructuredData(structuredData);
   });

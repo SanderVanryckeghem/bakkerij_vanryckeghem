@@ -10,7 +10,7 @@ export interface Address {
 
 export interface ContactInfo {
   phone: string;
-  email: string;
+  email?: string;
   address: Address;
 }
 
