@@ -25,82 +25,170 @@
   },
   {
     "id": 4,
-    "name": "Meergranen Brood",
-    "description": "Rijk meergranenbrood met zaden en pitten",
+    "name": "Wit Rond",
+    "description": "Rond wit brood, perfect voor bij de maaltijd",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/Brood&banket.png"
+    "imageUrl": "images/product/bread/wit_rond.png"
   },
   {
     "id": 5,
-    "name": "Desem Brood",
-    "description": "Traditioneel desembrood met een unieke smaak",
+    "name": "Bruin Rond",
+    "description": "Rond bruin brood, lekker bij elke gelegenheid",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/Brood&banket.png"
+    "imageUrl": "images/product/bread/bruin_rond.png"
   },
   {
     "id": 6,
-    "name": "Croissant",
-    "description": "Boterrijke croissant, elke ochtend vers gebakken",
-    "category": "Gebak",
+    "name": "Speltbrood",
+    "description": "Licht verteerbaar speltbrood met een nootachtige smaak",
+    "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/Brood&banket.png"
+    "imageUrl": "images/product/bread/spelt.png"
   },
   {
     "id": 7,
-    "name": "Chocoladekoek",
-    "description": "Smeuïge chocoladekoek met pure chocolade",
-    "category": "Gebak",
+    "name": "Chia Brood",
+    "description": "Gezond brood verrijkt met chiazaadjes",
+    "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/Brood&banket.png"
+    "imageUrl": "images/product/bread/chia.png"
   },
   {
     "id": 8,
-    "name": "Appeltaart",
-    "description": "Huisgemaakte appeltaart met verse appels en kaneel",
-    "category": "Gebak",
+    "name": "Synergie",
+    "description": "Vezelrijk brood met een perfecte balans van granen",
+    "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/Brood&banket.png"
+    "imageUrl": "images/product/bread/synergie.png"
   },
   {
     "id": 9,
-    "name": "Rijstevlaai",
-    "description": "Traditionele rijstevlaai met romige vulling",
-    "category": "Gebak",
+    "name": "Contessa",
+    "description": "Luchtig en smaakvol Contessa brood",
+    "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/Brood&banket.png"
+    "imageUrl": "images/product/bread/contessa.png"
   },
   {
     "id": 10,
-    "name": "Kerststol",
-    "description": "Traditionele kerststol met amandelspijs en rozijnen",
-    "category": "Ontbijtkoeken",
-    "isAvailable": false,
-    "imageUrl": "images/Brood&banket.png"
+    "name": "Crunchy",
+    "description": "Extra knapperig brood met een rijke korst",
+    "category": "Brood",
+    "isAvailable": true,
+    "imageUrl": "images/product/bread/crunchy.png"
   },
   {
     "id": 11,
-    "name": "Paasbrood",
-    "description": "Heerlijk paasbrood met amandelspijs",
-    "category": "Ontbijtkoeken",
-    "isAvailable": false,
-    "imageUrl": "images/Brood&banket.png"
+    "name": "Maia",
+    "description": "Ambachtelijk Maia brood met unieke smaak",
+    "category": "Brood",
+    "isAvailable": true,
+    "imageUrl": "images/product/bread/maia.png"
   },
   {
     "id": 12,
-    "name": "Speculaas",
-    "description": "Krokante speculaas met traditionele kruiden",
-    "category": "Ontbijtkoeken",
+    "name": "Royal",
+    "description": "Premium Royal brood voor speciale momenten",
+    "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/Brood&banket.png"
+    "imageUrl": "images/product/bread/royal.png"
   },
   {
     "id": 13,
-    "name": "Taart op Bestelling",
-    "description": "Gepersonaliseerde taarten voor elke gelegenheid",
+    "name": "Zwarte Woud",
+    "description": "Donker roggebrood met een intense smaak",
+    "category": "Brood",
+    "isAvailable": true,
+    "imageUrl": "images/product/bread/zwarte_woud.png"
+  },
+  {
+    "id": 14,
+    "name": "Parisienne",
+    "description": "Frans stokbrood in traditionele stijl",
+    "category": "Brood",
+    "isAvailable": true,
+    "imageUrl": "images/product/bread/parisienne.png"
+  },
+  {
+    "id": 15,
+    "name": "Klein Stokbrood",
+    "description": "Handig klein stokbrood, ideaal voor onderweg",
+    "category": "Brood",
+    "isAvailable": true,
+    "imageUrl": "images/product/bread/klein_stokbrood.png"
+  },
+  {
+    "id": 16,
+    "name": "Ronde Pistolet",
+    "description": "Krokante ronde pistolet, perfect voor beleg",
+    "category": "Brood",
+    "isAvailable": true,
+    "imageUrl": "images/product/bread/ronde_pistolet.png"
+  },
+  {
+    "id": 17,
+    "name": "Zachte Pistolet",
+    "description": "Zachte pistolet met een fluffy binnenkant",
+    "category": "Brood",
+    "isAvailable": true,
+    "imageUrl": "images/product/bread/zachte_pistolet.png"
+  },
+  {
+    "id": 18,
+    "name": "Croissant",
+    "description": "Boterrijke croissant, elke ochtend vers gebakken",
     "category": "Ontbijtkoeken",
     "isAvailable": true,
-    "imageUrl": "images/Brood&banket.png"
+    "imageUrl": "images/product/pastries/croisant.png"
+  },
+  {
+    "id": 19,
+    "name": "Chocoladekoek",
+    "description": "Smeuïge chocoladekoek met pure chocolade",
+    "category": "Ontbijtkoeken",
+    "isAvailable": true,
+    "imageUrl": "images/product/pastries/chocoladekoek.png"
+  },
+  {
+    "id": 20,
+    "name": "Boterkoek",
+    "description": "Romige boterkoek met een heerlijke smaak",
+    "category": "Ontbijtkoeken",
+    "isAvailable": true,
+    "imageUrl": "images/product/pastries/boterkoek.png"
+  },
+  {
+    "id": 21,
+    "name": "Appelflap",
+    "description": "Krokante appelflap gevuld met verse appel",
+    "category": "Gebak",
+    "isAvailable": true,
+    "imageUrl": "images/product/pastries/appelflap.png"
+  },
+  {
+    "id": 22,
+    "name": "Confituurkoek",
+    "description": "Zoete koek gevuld met huisgemaakte confituur",
+    "category": "Gebak",
+    "isAvailable": true,
+    "imageUrl": "images/product/pastries/confituur.png"
+  },
+  {
+    "id": 23,
+    "name": "Maantje",
+    "description": "Licht gebakje in de vorm van een maantje",
+    "category": "Gebak",
+    "isAvailable": true,
+    "imageUrl": "images/product/pastries/maantje.png"
+  },
+  {
+    "id": 24,
+    "name": "Klaaskoek",
+    "description": "Traditionele klaaskoek voor Sinterklaas",
+    "category": "Ontbijtkoeken",
+    "isAvailable": true,
+    "imageUrl": "images/product/pastries/klaaskoek.png"
   }
 ]
