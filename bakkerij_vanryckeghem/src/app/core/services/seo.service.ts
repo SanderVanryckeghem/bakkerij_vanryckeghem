@@ -15,6 +15,7 @@ export interface PageMeta {
 export class SeoService {
   private meta = inject(Meta);
   private titleService = inject(Title);
+  private readonly STRUCTURED_DATA_ID = 'structured-data-script';
 
   private defaultMeta: PageMeta = {
     title: 'Bakkerij Vanryckeghem - Ambachtelijk Brood & Gebak in Harelbeke',
@@ -53,7 +54,15 @@ export class SeoService {
   }
 
   addStructuredData(data: object): void {
+    // Remove existing structured data script if it exists
+    const existingScript = document.getElementById(this.STRUCTURED_DATA_ID);
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    // Create and append new structured data script
     const script = document.createElement('script');
+    script.id = this.STRUCTURED_DATA_ID;
     script.type = 'application/ld+json';
     script.text = JSON.stringify(data);
     document.head.appendChild(script);
