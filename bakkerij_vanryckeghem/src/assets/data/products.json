@@ -57,11 +57,11 @@
   },
   {
     "id": 8,
-    "name": "Synergie",
+    "name": "country",
     "description": "Vezelrijk brood met een perfecte balans van granen",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/synergie.png"
+    "imageUrl": "images/product/bread/country.png"
   },
   {
     "id": 9,
