@@ -3,7 +3,7 @@
     <div class="container-custom hero-content">
       <h1 class="hero-title">{{ title() }}</h1>
       @if (subtitle()) {
-        <p class="hero-subtitle">{{ subtitle() }}</p>
+        <p class="hero-subtitle" [innerHTML]="subtitle()"></p>
       }
       @if (ctaText() && ctaLink()) {
         <div class="hero-cta">
