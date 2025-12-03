@@ -12,6 +12,8 @@
           <button
             class="category-filter-btn"
             [class.active]="selectedCategory() === category"
+            [attr.aria-pressed]="selectedCategory() === category"
+            [attr.aria-label]="'Filter op categorie: ' + category"
             (click)="selectCategory(category)"
           >
             {{ category }}

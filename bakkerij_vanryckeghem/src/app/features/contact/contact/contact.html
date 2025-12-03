@@ -51,18 +51,24 @@
       <h2 class="text-section text-bakery-brown mb-8 text-center">Kom langs</h2>
 
       <div class="map-container">
-        <div class="map-wrapper">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.4537869282516!2d3.3073635!3d50.9817147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c348b8e8e8e8e8%3A0x8e8e8e8e8e8e8e8e!2sOverleiestraat%2038%2C%208530%20Harelbeke!5e0!3m2!1snl!2sbe!4v1234567890"
-            width="600"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Locatie Bakkerij Vanryckeghem"
-          ></iframe>
-        </div>
+        @defer (on viewport) {
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.4537869282516!2d3.3073635!3d50.9817147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c348b8e8e8e8e8%3A0x8e8e8e8e8e8e8e8e!2sOverleiestraat%2038%2C%208530%20Harelbeke!5e0!3m2!1snl!2sbe!4v1234567890"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Locatie Bakkerij Vanryckeghem"
+            ></iframe>
+          </div>
+        } @placeholder {
+          <div class="map-wrapper map-placeholder">
+            <p>Kaart laden...</p>
+          </div>
+        }
 
         <div class="map-actions">
           <a
