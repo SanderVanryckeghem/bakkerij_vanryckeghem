@@ -1,7 +1,8 @@
-import { Component, inject, effect, ChangeDetectionStrategy, PLATFORM_ID } from '@angular/core';
+import { Component, inject, effect, ChangeDetectionStrategy, PLATFORM_ID, DestroyRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { Router, RouterOutlet, NavigationStart, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Header } from './layouts/header/header';
 import { Footer } from './layouts/footer/footer';
 import { SeoService } from './core/services/seo.service';
@@ -19,11 +20,15 @@ export class App {
   private contentService = inject(ContentService);
   private router = inject(Router);
   private platformId = inject(PLATFORM_ID);
+  private destroyRef = inject(DestroyRef);
 
   constructor() {
     if (isPlatformBrowser(this.platformId)) {
       this.router.events
-        .pipe(filter((event) => event instanceof NavigationStart || event instanceof NavigationEnd))
+        .pipe(
+          filter((event) => event instanceof NavigationStart || event instanceof NavigationEnd),
+          takeUntilDestroyed(this.destroyRef)
+        )
         .subscribe(() => {
           window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
         });
