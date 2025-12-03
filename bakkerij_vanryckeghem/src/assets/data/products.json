@@ -42,15 +42,15 @@
   {
     "id": 6,
     "name": "Speltbrood",
-    "description": "Licht verteerbaar speltbrood met een nootachtige smaak",
+    "description": "Licht verteerbaar speltbrood",
     "category": "Brood",
     "isAvailable": true,
     "imageUrl": "images/product/bread/spelt.png"
   },
   {
     "id": 7,
-    "name": "Chia Brood",
-    "description": "Gezond brood verrijkt met chiazaadjes",
+    "name": "Koolhydraatarm",
+    "description": "Lijnzaad, sesamzaad, rogge, gerst en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
     "imageUrl": "images/product/bread/chia.png"
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "name": "country",
-    "description": "Vezelrijk brood met een perfecte balans van granen",
+    "description": "Haver",
     "category": "Brood",
     "isAvailable": true,
     "imageUrl": "images/product/bread/country.png"
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "name": "Contessa",
-    "description": "Luchtig en smaakvol Contessa brood",
+    "description": "Sesamzaad, pompoen en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
     "imageUrl": "images/product/bread/contessa.png"
@@ -74,15 +74,15 @@
   {
     "id": 10,
     "name": "Crunchy",
-    "description": "Extra knapperig brood met een rijke korst",
+    "description": "Rogge, gerst en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
     "imageUrl": "images/product/bread/crunchy.png"
   },
   {
     "id": 11,
-    "name": "Maia",
-    "description": "Ambachtelijk Maia brood met unieke smaak",
+    "name": "Maya",
+    "description": "Zonnebloempitten, sesamzaad en lijnzaad",
     "category": "Brood",
     "isAvailable": true,
     "imageUrl": "images/product/bread/maia.png"
@@ -90,7 +90,7 @@
   {
     "id": 12,
     "name": "Royal",
-    "description": "Premium Royal brood voor speciale momenten",
+    "description": "Mais, gerst, rogge, haver en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
     "imageUrl": "images/product/bread/royal.png"
@@ -98,7 +98,7 @@
   {
     "id": 13,
     "name": "Zwarte Woud",
-    "description": "Donker roggebrood met een intense smaak",
+    "description": "Gerst, rogge, haver en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
     "imageUrl": "images/product/bread/zwarte_woud.png"
@@ -170,7 +170,7 @@
   {
     "id": 22,
     "name": "Confituurkoek",
-    "description": "Zoete koek gevuld met confituur",
+    "description": "Bladerdeeg koek gevuld met confituur",
     "category": "Gebak",
     "isAvailable": true,
     "imageUrl": "images/product/cake/confituur.png"
@@ -178,7 +178,7 @@
   {
     "id": 23,
     "name": "Maantje",
-    "description": "Licht gebakje in de vorm van een maantje",
+    "description": "Bladerdaag licht gebakje in de vorm van een maantje met crème patissier",
     "category": "Gebak",
     "isAvailable": true,
     "imageUrl": "images/product/cake/maantje.png"
