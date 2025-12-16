@@ -5,7 +5,7 @@
     "description": "Klassiek wit brood, knapperig van buiten en zacht van binnen",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/wit.png"
+    "imageUrl": "images/product/bread/wit.webp"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Klassiek bruin brood, knapperig van buiten en zacht van binnen",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/bruin.png"
+    "imageUrl": "images/product/bread/bruin.webp"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Gezond en voedzaam volkoren brood met een heerlijke smaak",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/volkoren.png"
+    "imageUrl": "images/product/bread/volkoren.webp"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "Rond wit brood, perfect voor bij de maaltijd",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/wit_rond.png"
+    "imageUrl": "images/product/bread/wit_rond.webp"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "Rond bruin brood, lekker bij elke gelegenheid",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/bruin_rond.png"
+    "imageUrl": "images/product/bread/bruin_rond.webp"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "description": "Licht verteerbaar speltbrood",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/spelt.png"
+    "imageUrl": "images/product/bread/spelt.webp"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "description": "Lijnzaad, sesamzaad, rogge, gerst en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/chia.png"
+    "imageUrl": "images/product/bread/chia.webp"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "description": "Haver",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/country.png"
+    "imageUrl": "images/product/bread/country.webp"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "description": "Sesamzaad, pompoen en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/contessa.png"
+    "imageUrl": "images/product/bread/contessa.webp"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "description": "Rogge, gerst en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/crunchy.png"
+    "imageUrl": "images/product/bread/crunchy.webp"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "description": "Zonnebloempitten, sesamzaad en lijnzaad",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/maia.png"
+    "imageUrl": "images/product/bread/maia.webp"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "description": "Mais, gerst, rogge, haver en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/royal.png"
+    "imageUrl": "images/product/bread/royal.webp"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "description": "Gerst, rogge, haver en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/zwarte_woud.png"
+    "imageUrl": "images/product/bread/zwarte_woud.webp"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "description": "Frans stokbrood in traditionele stijl",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/parisienne.png"
+    "imageUrl": "images/product/bread/parisienne.webp"
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "description": "Handig klein stokbrood, ideaal voor onderweg",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/klein_stokbrood.png"
+    "imageUrl": "images/product/bread/klein_stokbrood.webp"
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "description": "Krokante ronde pistolet, perfect voor beleg",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/ronde_pistolet.png"
+    "imageUrl": "images/product/bread/ronde_pistolet.webp"
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "description": "Zachte pistolet met een fluffy binnenkant",
     "category": "Brood",
     "isAvailable": true,
-    "imageUrl": "images/product/bread/zachte_pistolet.png"
+    "imageUrl": "images/product/bread/zachte_pistolet.webp"
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "description": "Boterrijke croissant, elke ochtend vers gebakken",
     "category": "Ontbijtkoeken",
     "isAvailable": true,
-    "imageUrl": "images/product/pastries/croisant.png"
+    "imageUrl": "images/product/pastries/croisant.webp"
   },
   {
     "id": 19,
@@ -149,7 +149,7 @@
     "description": "Smeuïge chocoladekoek met pure chocolade",
     "category": "Ontbijtkoeken",
     "isAvailable": true,
-    "imageUrl": "images/product/pastries/chocoladekoek.png"
+    "imageUrl": "images/product/pastries/chocoladekoek.webp"
   },
   {
     "id": 20,
@@ -157,7 +157,7 @@
     "description": "Romige boterkoek met een heerlijke smaak",
     "category": "Ontbijtkoeken",
     "isAvailable": true,
-    "imageUrl": "images/product/pastries/boterkoek.png"
+    "imageUrl": "images/product/pastries/boterkoek.webp"
   },
   {
     "id": 21,
@@ -165,7 +165,7 @@
     "description": "Krokante appelflap gevuld met verse appel",
     "category": "Gebak",
     "isAvailable": true,
-    "imageUrl": "images/product/cake/appelflap.png"
+    "imageUrl": "images/product/cake/appelflap.webp"
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@
     "description": "Bladerdeeg koek gevuld met confituur",
     "category": "Gebak",
     "isAvailable": true,
-    "imageUrl": "images/product/cake/confituur.png"
+    "imageUrl": "images/product/cake/confituur.webp"
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "description": "Bladerdaag licht gebakje in de vorm van een maantje met crème patissier",
     "category": "Gebak",
     "isAvailable": true,
-    "imageUrl": "images/product/cake/maantje.png"
+    "imageUrl": "images/product/cake/maantje.webp"
   },
   {
     "id": 24,
@@ -189,6 +189,6 @@
     "description": "Traditionele klaaskoek voor Sinterklaas",
     "category": "Ontbijtkoeken",
     "isAvailable": true,
-    "imageUrl": "images/product/pastries/klaaskoek.png"
+    "imageUrl": "images/product/pastries/klaaskoek.webp"
   }
 ]

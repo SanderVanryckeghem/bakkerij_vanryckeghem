@@ -1,4 +1,5 @@
 import { Component, inject, signal, OnInit, ChangeDetectionStrategy, effect } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Hero } from '../../../shared/components/hero/hero';
 import { CategoryCard } from '../../../shared/components/category-card/category-card';
@@ -8,7 +9,7 @@ import { SeoService } from '../../../core/services/seo.service';
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, CategoryCard, RouterLink, Popup],
+  imports: [Hero, CategoryCard, RouterLink, Popup, NgOptimizedImage],
   templateUrl: './home.html',
   styleUrl: './home.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

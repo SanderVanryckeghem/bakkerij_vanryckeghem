@@ -28,7 +28,7 @@
           <div class="product-card">
             <div class="product-image">
               @if (product.imageUrl) {
-                <img [src]="product.imageUrl | assetUrl" [alt]="product.name" loading="lazy">
+                <img [ngSrc]="product.imageUrl | assetUrl" [alt]="product.name" width="200" height="200">
               } @else {
                 <div class="product-image-placeholder">
                   <svg class="w-16 h-16 text-bakery-brown-light" fill="currentColor" viewBox="0 0 24 24">

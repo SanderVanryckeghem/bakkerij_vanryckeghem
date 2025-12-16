@@ -1,4 +1,5 @@
 import { Component, signal, computed, inject, ChangeDetectionStrategy, effect } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { ActivatedRoute, Params } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Hero } from '../../../shared/components';
@@ -9,7 +10,7 @@ import { AssetUrlPipe } from '../../../shared/pipes/asset-url.pipe';
 
 @Component({
   selector: 'app-assortiment',
-  imports: [Hero, AssetUrlPipe],
+  imports: [Hero, AssetUrlPipe, NgOptimizedImage],
   templateUrl: './assortiment.html',
   styleUrl: './assortiment.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
