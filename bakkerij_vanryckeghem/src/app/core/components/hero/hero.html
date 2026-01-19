@@ -1,4 +1,4 @@
-<section class="hero" [style.background-image]="backgroundImage() ? 'url(' + backgroundImage() + ')' : 'none'">
+<section class="hero" [class.hero--large]="size() === 'large'" [style.background-image]="backgroundImage() ? 'url(' + backgroundImage() + ')' : 'none'">
   <div class="hero-overlay">
     <div class="container-custom hero-content">
       <h1 class="hero-title">{{ title() }}</h1>

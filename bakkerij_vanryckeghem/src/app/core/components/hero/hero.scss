@@ -17,6 +17,14 @@
   @media (min-width: 768px) {
     min-height: 350px;
   }
+
+  &--large {
+    min-height: 380px;
+
+    @media (min-width: 768px) {
+      min-height: 400px;
+    }
+  }
 }
 
 .hero-overlay {

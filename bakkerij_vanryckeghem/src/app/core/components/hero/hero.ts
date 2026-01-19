@@ -15,4 +15,5 @@ export class Hero {
   ctaText = input<string>();
   ctaLink = input<string>();
   backgroundImage = input<string>();
+  size = input<'default' | 'large'>('default');
 }
