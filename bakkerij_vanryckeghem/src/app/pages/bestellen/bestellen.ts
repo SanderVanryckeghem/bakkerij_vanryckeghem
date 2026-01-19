@@ -1,6 +1,6 @@
 import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
-import { Hero } from '../../../core/components';
-import { SeoService } from '../../../core/services/seo.service';
+import { Hero } from '../../core/components';
+import { SeoService } from '../../core/services/seo.service';
 
 interface OrderingMethod {
   title: string;

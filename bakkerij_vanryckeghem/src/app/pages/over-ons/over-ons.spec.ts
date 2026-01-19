@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { OverOns } from './over-ons';
-import { SeoService } from '../../../core/services/seo.service';
+import { SeoService } from '../../core/services/seo.service';
 import { ElementRef } from '@angular/core';
 import { provideRouter } from '@angular/router';
 

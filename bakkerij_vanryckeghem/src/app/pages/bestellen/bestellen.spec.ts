@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Bestellen } from './bestellen';
-import { SeoService } from '../../../core/services/seo.service';
+import { SeoService } from '../../core/services/seo.service';
 import { provideRouter } from '@angular/router';
 
 describe('Bestellen', () => {

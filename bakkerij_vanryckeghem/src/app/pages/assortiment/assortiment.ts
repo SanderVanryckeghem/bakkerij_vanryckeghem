@@ -2,11 +2,11 @@ import { Component, signal, computed, inject, ChangeDetectionStrategy, effect } 
 import { NgOptimizedImage } from '@angular/common';
 import { ActivatedRoute, Params } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Hero } from '../../../core/components';
-import { ContentService } from '../../../core/services';
-import { CategoryFilter, CATEGORY_FILTERS } from '../../../shared/constants/categories';
-import { SeoService } from '../../../core/services/seo.service';
-import { AssetUrlPipe } from '../../../shared/pipes/asset-url.pipe';
+import { Hero } from '../../core/components';
+import { ContentService } from '../../core/services';
+import { CategoryFilter, CATEGORY_FILTERS } from '../../shared/constants/categories';
+import { SeoService } from '../../core/services/seo.service';
+import { AssetUrlPipe } from '../../shared/pipes/asset-url.pipe';
 
 @Component({
   selector: 'app-assortiment',

@@ -1,8 +1,8 @@
 import { Component, AfterViewInit, ElementRef, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { Hero } from '../../../core/components';
-import { SeoService } from '../../../core/services/seo.service';
-import { AssetUrlPipe } from '../../../shared/pipes/asset-url.pipe';
+import { Hero } from '../../core/components';
+import { SeoService } from '../../core/services/seo.service';
+import { AssetUrlPipe } from '../../shared/pipes/asset-url.pipe';
 
 interface TimelineEvent {
   year: string;

@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Assortiment } from './assortiment';
-import { ContentService } from '../../../core/services';
-import { SeoService } from '../../../core/services/seo.service';
+import { ContentService } from '../../core/services';
+import { SeoService } from '../../core/services/seo.service';
 import { ActivatedRoute } from '@angular/router';
 import { provideRouter } from '@angular/router';
 import { signal } from '@angular/core';
-import { Product } from '../../../shared/models';
+import { Product } from '../../shared/models';
 import { of } from 'rxjs';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';

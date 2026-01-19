@@ -1,11 +1,11 @@
 import { Component, inject, signal, OnInit, ChangeDetectionStrategy, effect } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { Hero } from '../../../core/components/hero/hero';
-import { CategoryCard } from '../../../core/components/category-card/category-card';
-import { Popup } from '../../../core/components/popup/popup';
-import { ContentService } from '../../../core/services';
-import { SeoService } from '../../../core/services/seo.service';
+import { Hero } from '../../core/components/hero/hero';
+import { CategoryCard } from '../../core/components/category-card/category-card';
+import { Popup } from '../../core/components/popup/popup';
+import { ContentService } from '../../core/services';
+import { SeoService } from '../../core/services/seo.service';
 
 @Component({
   selector: 'app-home',

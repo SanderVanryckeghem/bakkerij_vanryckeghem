@@ -1,7 +1,7 @@
 import { Component, inject, OnInit, computed, ChangeDetectionStrategy } from '@angular/core';
-import { Hero } from '../../../core/components';
-import { ContentService } from '../../../core/services';
-import { SeoService } from '../../../core/services/seo.service';
+import { Hero } from '../../core/components';
+import { ContentService } from '../../core/services';
+import { SeoService } from '../../core/services/seo.service';
 
 @Component({
   selector: 'app-contact',

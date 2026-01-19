@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Home } from './home';
-import { ContentService } from '../../../core/services';
-import { SeoService } from '../../../core/services/seo.service';
+import { ContentService } from '../../core/services';
+import { SeoService } from '../../core/services/seo.service';
 import { provideRouter } from '@angular/router';
 import { signal } from '@angular/core';
-import { BakeryInfo, FAQItem, Category, PopupConfig } from '../../../shared/models';
+import { BakeryInfo, FAQItem, Category, PopupConfig } from '../../shared/models';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 
