@@ -42,7 +42,7 @@ export class Bestellen implements OnInit {
     this.seoService.updateMetaTags({
       title: 'Bestellen - Bakkerij Vanryckeghem | Telefonisch of in de winkel',
       description: 'Bestel uw vers brood en gebak bij Bakkerij Vanryckeghem. Telefonisch op 056 71 23 45 of kom langs in onze winkel in Harelbeke.',
-      keywords: 'bestellen, brood bestellen, gebak bestellen, telefonisch, winkel',
+      keywords: 'bestellen, brood bestellen, gebak bestellen, telefonisch, winkel, Harelbeke',
       url: 'https://www.bakkerijvanryckeghem.be/bestellen'
     });
   }
