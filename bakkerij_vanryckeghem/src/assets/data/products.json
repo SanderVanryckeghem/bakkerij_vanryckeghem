@@ -74,7 +74,7 @@
   {
     "id": 10,
     "name": "Crunchy",
-    "description": "Rogge, gerst en zonnebloempitten",
+    "description": "Rogge, gerst, tarwe en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
     "imageUrl": "images/product/bread/crunchy.webp"
@@ -82,7 +82,7 @@
   {
     "id": 11,
     "name": "Maya",
-    "description": "Zonnebloempitten, sesamzaad en lijnzaad",
+    "description": "Zonnebloempitten, sesamzaad, tarwe en lijnzaad",
     "category": "Brood",
     "isAvailable": true,
     "imageUrl": "images/product/bread/maia.webp"
@@ -90,7 +90,7 @@
   {
     "id": 12,
     "name": "Royal",
-    "description": "Mais, gerst, rogge, haver en zonnebloempitten",
+    "description": "Mais, gerst, rogge, haver, tarwe en zonnebloempitten",
     "category": "Brood",
     "isAvailable": true,
     "imageUrl": "images/product/bread/royal.webp"
@@ -162,14 +162,14 @@
   {
     "id": 21,
     "name": "Appelflap",
-    "description": "Krokante appelflap gevuld met verse appel",
+    "description": "Krokante appelflap",
     "category": "Gebak",
     "isAvailable": true,
     "imageUrl": "images/product/cake/appelflap.webp"
   },
   {
     "id": 22,
-    "name": "Confituurkoek",
+    "name": "Confituur",
     "description": "Bladerdeeg koek gevuld met confituur",
     "category": "Gebak",
     "isAvailable": true,
@@ -177,8 +177,8 @@
   },
   {
     "id": 23,
-    "name": "Maantje",
-    "description": "Bladerdaag licht gebakje in de vorm van een maantje met crème patissier",
+    "name": "Crème koek maan",
+    "description": "Bladerdeeg gebakje in de vorm van een maantje met crème patissier",
     "category": "Gebak",
     "isAvailable": true,
     "imageUrl": "images/product/cake/maantje.webp"
