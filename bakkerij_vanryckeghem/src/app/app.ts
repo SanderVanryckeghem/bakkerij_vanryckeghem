@@ -6,7 +6,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Header } from './layouts/header/header';
 import { Footer } from './layouts/footer/footer';
 import { SeoService } from './core/services/seo.service';
-import { ContentService } from './shared/services';
+import { ContentService } from './core/services';
 
 @Component({
   selector: 'app-root',

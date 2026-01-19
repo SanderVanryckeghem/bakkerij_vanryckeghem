@@ -1,5 +1,5 @@
 import { Component, inject, computed, ChangeDetectionStrategy } from '@angular/core';
-import { ContentService } from '../../shared/services';
+import { ContentService } from '../../core/services';
 
 interface CompactHours {
   days: string;

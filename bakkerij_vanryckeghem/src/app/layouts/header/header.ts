@@ -1,6 +1,6 @@
 import { Component, inject, signal, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { ContentService } from '../../shared/services';
+import { ContentService } from '../../core/services';
 
 interface NavItem {
   label: string;

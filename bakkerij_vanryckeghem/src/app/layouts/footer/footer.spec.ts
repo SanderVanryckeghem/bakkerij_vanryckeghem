@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Footer } from './footer';
-import { ContentService } from '../../shared/services';
+import { ContentService } from '../../core/services';
 import { signal } from '@angular/core';
 import { BakeryInfo, OpeningHours } from '../../shared/models';
 import { provideHttpClient } from '@angular/common/http';

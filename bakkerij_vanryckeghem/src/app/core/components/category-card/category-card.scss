@@ -1,0 +1,79 @@
+@use '../../../shared/styles/colors' as *;
+
+.category-card {
+  background-color: $white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px $shadow-brown-medium, 0 2px 4px -1px $shadow-brown-light;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &.clickable {
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 15px -3px $shadow-brown-dark, 0 4px 6px -2px $shadow-brown-medium;
+    }
+  }
+}
+
+.category-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.category-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.category-card-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: $bakery-cream;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .clickable:hover & img {
+    transform: scale(1.05);
+  }
+}
+
+.category-card-body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.category-card-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $bakery-brown;
+  margin-bottom: 0.75rem;
+  font-family: Georgia, Palatino, 'Times New Roman', serif;
+}
+
+.category-card-icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.category-card-description {
+  color: $bakery-brown-light;
+  line-height: 1.6;
+  flex: 1;
+}

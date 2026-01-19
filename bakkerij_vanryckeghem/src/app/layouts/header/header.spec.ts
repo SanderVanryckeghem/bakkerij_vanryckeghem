@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Header } from './header';
-import { ContentService } from '../../shared/services';
+import { ContentService } from '../../core/services';
 import { provideRouter } from '@angular/router';
 import { signal } from '@angular/core';
 import { BakeryInfo } from '../../shared/models';
