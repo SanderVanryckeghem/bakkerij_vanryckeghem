@@ -78,4 +78,3 @@ jobs:
           protocol: ftp
           local-dir: ./bakkerij_vanryckeghem/dist/bakkerij_vanryckeghem/browser/
           server-dir: /public_html/
-          dangerous-clean-slate: true
