@@ -1,7 +1,7 @@
 {
   "show": true,
-  "title": "Langer gesloten",
-  "message": "Beste klanten, \n\n  Door een schouderbreuk van Olivier zal de bakkerij wat langer gesloten zijn dan voorzien. \n\n Wij openen terug op <strong>woensdag 11 maart</strong>. \n\n Bedankt voor het begrip en graag tot dan!",
-  "startDate": "2026-02-09T00:00:00",
-  "endDate": "2026-03-10T23:59:59"
+  "title": "Zomerverlof",
+  "message": "Beste klanten, \n\n De bakkerij is gesloten voor het zomerverlof. \n\n Wij openen terug op <strong>woensdag 19 augustus</strong>. \n\n \n\n Bedankt voor het begrip en graag tot dan!",
+  "startDate": "2026-07-22T00:00:00",
+  "endDate": "2026-08-18T23:59:59"
 }
